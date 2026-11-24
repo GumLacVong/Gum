@@ -1,0 +1,1012 @@
+<html lang="vi"><head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GUM AI BOT - AI thật Wan Animate</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f0f1a;color:#fff}
+header{padding:16px 14px 10px;background:#1a1a2e;border-bottom:1px solid #2d2d44;position:sticky;top:0;z-index:20}
+.top{display:flex;align-items:center;gap:12px}
+.hamburger{font-size:26px;background:#26264a;border:1px solid #3a3a5a;color:#fff;border-radius:12px;padding:6px 12px;cursor:pointer}
+.logo{font-size:30px;font-weight:900;line-height:1}.logo span{color:#f472b6}.sub{font-size:12px;color:#a1a1aa;margin-top:2px}
+.drawer{display:none;background:#151527;border:1px solid #2d2d44;border-radius:16px;padding:12px;margin-top:12px}
+.drawer button{display:block;width:100%;text-align:left;background:#1e1e35;border:1px solid #2d2d44;color:#fff;padding:12px;border-radius:12px;margin:6px 0;font-size:15px}
+.pill{background:#26264a;border:1px solid #3a3a5a;padding:6px 12px;border-radius:999px;font-size:12px;display:inline-block;margin:4px 4px 0 0}
+.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;font-size:14px}
+.btn-pink{background:#ec4899;color:#fff}.btn-dark{background:#fff;color:#111}.btn-purple{background:#a855f7;color:#fff}.btn-big{width:100%;padding:16px;font-size:17px}
+.wrap{max-width:920px;margin:0 auto;padding:14px}
+.menu-select{width:100%;padding:14px;border-radius:14px;background:#1e1e35;color:#fff;border:1px solid #2d2d44;font-size:16px;font-weight:700;margin:12px 0}
+.card{background:#1e1e35;border:1px solid #2d2d44;border-radius:16px;padding:14px;margin:12px 0}
+.badge{display:inline-block;background:#064e3b;color:#6ee7b7;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+h1{font-size:30px;line-height:1.15;margin:10px 0}h1 span{color:#f472b6}h2{font-size:17px;margin:0 0 8px}
+.muted{color:#a1a1aa;font-size:13px;line-height:1.6}
+.upload{border:2px dashed #a855f7;border-radius:14px;padding:22px;text-align:center;background:#151527;cursor:pointer}
+.preview{width:100%;border-radius:14px;display:none;margin-top:10px}
+input,select{padding:12px;border:1px solid #3a3a5a;border-radius:12px;margin:6px 0;background:#151527;color:#fff;width:100%}
+footer{background:#151527;border-top:1px solid #2d2d44;padding:22px 16px;text-align:center}
+.footer-title{font-size:22px;font-weight:900}.footer-line{color:#d4d4d8;font-size:15px;margin:6px 0}.footer-line b{color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.ok{background:#064e3b;color:#6ee7b7;padding:8px 12px;border-radius:12px;font-size:13px;display:none;margin-top:10px}
+.loadbox{display:none;background:#1e1e35;border:1px solid #a855f7;border-radius:12px;padding:14px;text-align:center;margin-top:10px}
+
+/* --- NAP CREDITS DEP --- */
+.credits-hero{background:linear-gradient(135deg,#ec4899,#a855f7,#6366f1);border-radius:20px;padding:18px;text-align:center;margin:0 0 12px;box-shadow:0 10px 30px rgba(236,72,153,.35)}
+.credits-hero h2{margin:0;font-size:22px;line-height:1.2}
+.credits-hero p{margin:6px 0 0;font-size:13px;opacity:.92}
+.bank-card{background:linear-gradient(135deg,#1e1b4b,#312e81);border:1px solid #4f46e5;border-radius:18px;padding:16px;margin:12px 0;position:relative;overflow:hidden}
+.bank-card:before{content:'';position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:radial-gradient(circle,#ec4899 0%,transparent 70%);opacity:.35}
+.bank-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.15)}
+.bank-row:last-child{border:0}
+.bank-label{font-size:12px;color:#c7d2fe;text-transform:uppercase;letter-spacing:.5px}
+.bank-value{font-size:16px;font-weight:800}
+.copy-mini{background:#fff;color:#111;border:0;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.user-box{background:#fff;color:#111;border-radius:18px;padding:14px;margin:12px 0}
+.user-box label{font-size:13px;font-weight:800;color:#111}
+.user-box input{background:#f1f5f9!important;color:#111!important;border:1px solid #e2e8f0!important;font-weight:700;text-transform:uppercase}
+.nd-preview{background:#fef3c7;border:1px dashed #f59e0b;border-radius:12px;padding:12px;margin-top:10px;text-align:center}
+.nd-preview .nd-big{font-size:18px;font-weight:900;color:#92400e;word-break:break-all}
+.pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.pack-card{background:#1e1e35;border:2px solid #2d2d44;border-radius:16px;padding:12px;cursor:pointer;text-align:left;position:relative}
+.pack-card.active{border-color:#ec4899;background:#2a1030;box-shadow:0 0 0 2px #ec4899}
+.pack-card .p-name{font-weight:900;font-size:15px}
+.pack-card .p-credit{font-size:12px;color:#a1a1aa}
+.pack-card .p-price{font-size:17px;font-weight:900;color:#f472b6;margin-top:4px}
+.pack-card .p-tag{position:absolute;top:-8px;right:8px;background:#ec4899;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px}
+.qr-card{background:#fff;color:#111;border-radius:20px;padding:16px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);margin:12px 0}
+.qr-card img{width:230px;height:230px;max-width:80vw;object-fit:contain;border-radius:12px;background:#fff}
+.qr-loading{font-size:13px;color:#64748b}
+.qr-amount{font-size:22px;font-weight:900;margin:8px 0 2px}
+.qr-bank{font-size:13px;color:#334155;font-weight:700}
+.step-box{background:#151527;border-radius:14px;padding:12px;margin:10px 0}
+.step-box b{color:#f472b6}
+
+/* --- STUDIO 2 MUC --- */
+.studio-tabs{display:flex;gap:10px;margin:12px 0}
+.studio-tab{flex:1;border:2px solid #2d2d44;background:#1e1e35;color:#fff;border-radius:16px;padding:14px;cursor:pointer;text-align:left}
+.studio-tab.active{border-color:#ec4899;background:linear-gradient(135deg,#3b0a2a,#1e1e35);box-shadow:0 0 0 2px #ec4899}
+.studio-tab b{font-size:15px;display:block}
+.studio-tab span{font-size:12px;color:#a1a1aa}
+.ai-chip{border:2px solid #2d2d44;background:#151527;color:#fff;border-radius:999px;padding:10px 14px;cursor:pointer;font-size:13px;font-weight:700}
+.ai-chip.active{border-color:#a855f7;background:#2e1065;box-shadow:0 0 0 2px #a855f7}
+.prompt-box{width:100%;min-height:90px;background:#151527;color:#fff;border:1px solid #3a3a5a;border-radius:14px;padding:12px;font-size:14px}
+.style-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.style-pill{background:#26264a;border:1px solid #3a3a5a;color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;cursor:pointer}
+.style-pill.active{background:#ec4899;border-color:#ec4899}
+.ratio-row{display:flex;gap:8px;margin:8px 0}
+.ratio-btn{flex:1;background:#151527;border:1px solid #3a3a5a;color:#fff;border-radius:12px;padding:10px;cursor:pointer;font-weight:700}
+.ratio-btn.active{background:#fff;color:#111}
+
+/* --- KHO API KEY 10 CON --- */
+.api-card{background:#151527;border:1px solid #2d2d44;border-radius:16px;padding:14px;margin:10px 0}
+.api-card.has-key{border-color:#22c55e}
+.api-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.api-name{font-weight:900;font-size:15px}
+.api-desc{font-size:12px;color:#a1a1aa;margin:4px 0}
+.api-status{font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.api-status.no{background:#3f1d1d;color:#fca5a5}
+.api-status.yes{background:#064e3b;color:#6ee7b7}
+.api-input{margin-top:8px}
+.api-link{font-size:12px;color:#f472b6}
+
+/* --- TU DONG LAY FREE --- */
+.auto-box{background:linear-gradient(135deg,#064e3b,#065f46);border-radius:18px;padding:16px;margin:12px 0}
+.auto-btn{background:#fff;color:#111;border:0;border-radius:999px;padding:14px 18px;font-weight:900;cursor:pointer;font-size:15px;width:100%;margin:6px 0}
+.auto-btn2{background:#f59e0b;color:#111;border:0;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer;font-size:14px;width:100%;margin:6px 0}
+.check-item{display:flex;gap:10px;align-items:center;background:#151527;border:1px solid #2d2d44;border-radius:12px;padding:10px;margin:6px 0;cursor:pointer}
+.check-item.done{border-color:#22c55e;background:#0a2a1a}
+.check-box{width:22px;height:22px;border-radius:6px;border:2px solid #555;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+
+/* --- 6+6 AI GRID --- */
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.ai-card{background:#151527;border:2px solid #2d2d44;border-radius:16px;padding:12px;cursor:pointer;position:relative}
+.ai-card.active{border-color:#ec4899;background:#2a1a2e}
+.ai-card .ai-name{font-weight:900;font-size:14px}
+.ai-card .ai-free{font-size:12px;color:#22c55e;font-weight:700}
+.ai-card .ai-desc{font-size:12px;color:#aaa;margin:4px 0}
+.ai-badge{position:absolute;top:8px;right:8px;background:#22c55e;color:#fff;font-size:10px;font-weight:800;padding:3px 7px;border-radius:999px}
+.ai-badge.nokey{background:#555}
+.key-box-hidden{display:none !important}
+.credits-alert{background:#7f1d1d;border:1px solid #ef4444;border-radius:12px;padding:12px;margin:10px 0;display:none}
+</style></head>
+<body>
+<header>
+<div class="top"><button class="hamburger" onclick="toggleDrawer()">☰</button><div><div class="logo">GUM <span>AI BOT</span></div><div class="sub">Ảnh người → Video nhảy theo trend • gum-rho.vercel.app</div></div></div>
+<div id="drawer" class="drawer">
+<b style="font-size:13px;color:#a1a1aa">TÀI KHOẢN</b>
+<button onclick="selectMenu('account');showLoginForm()">➜ Đăng nhập</button>
+<button onclick="selectMenu('account');showRegisterForm()" style="background:#ec4899;border-color:#ec4899">👤 Đăng ký miễn phí</button>
+<b style="font-size:13px;color:#a1a1aa">MENU</b>
+<button onclick="selectMenu('studio')">🎬 Studio — Tạo video</button>
+<button onclick="selectMenu('credits')">💳 Nạp Credits</button>
+<button onclick="selectMenu('account')">👤 Tài khoản</button>
+<button onclick="selectMenu('settings')">⚙️ Cài đặt</button>
+<button onclick="selectMenu('admin')">🔐 Admin — Quản lý user</button>
+</div>
+<div><span class="pill">🪙 Credits: Khách • còn 2/2</span><span class="pill">🎥 AI thật Wan 2.2 Animate</span></div>
+</header>
+<div class="wrap">
+<select class="menu-select" id="menuSelect" onchange="showTab(this.value)">
+<option value="studio">🎬 Studio — Tạo video</option>
+<option value="credits">💳 Nạp Credits</option>
+<option value="account">👤 Tài khoản</option>
+<option value="settings">⚙️ Cài đặt</option>
+<option value="admin">🔐 Admin — Quản lý user</option>
+</select>
+<div id="studio">
+<div class="card"><span class="badge">● AI THẬT • Không cắt hình, không lắc ảnh</span>
+<h1>GUM Studio<br><span>Ảnh → Video bằng AI thật</span></h1>
+<p class="muted">Chọn 1 trong 2 mục bên dưới. Tạo ảnh = FREE (đang xài AI free). 1 video = 1 credit.</p>
+<div class="studio-tabs">
+<button class="studio-tab active" id="tabBtn1" onclick="switchStudio(1)"><b>🎨 1. Tạo ảnh AI</b><span>Gõ prompt → AI vẽ ảnh mới</span></button>
+<button class="studio-tab" id="tabBtn2" onclick="switchStudio(2)"><b>💃 2. Ảnh nhảy theo video mẫu</b><span>Ảnh mẫu + Video mẫu → Video nhảy</span></button>
+</div>
+<div class="row"><button class="btn btn-dark" onclick="goStudio(1)">🎨 Tạo ảnh AI ngay</button><button class="btn btn-pink" onclick="goStudio(2)">💃 Làm video nhảy ngay</button></div></div>
+
+<!-- ===== MUC 1: TAO ANH AI THEO PROMPT ===== -->
+<div id="studio1" class="card" style="border-color:#a855f7;scroll-margin-top:140px">
+<h2>🎨 MỤC 1 — TẠO ẢNH AI (THEO PROMPT) <span style="background:#22c55e;color:#fff;font-size:12px;padding:4px 10px;border-radius:999px;vertical-align:middle">FREE — Không trừ credits</span></h2>
+<p class="muted">Gõ mô tả bằng tiếng Việt, AI vẽ ảnh mới cho bạn. Xong có thể lấy ảnh đó qua Mục 2 để làm video nhảy luôn.</p>
+
+<p style="font-weight:800;margin-top:14px">🤖 Chọn AI vẽ ảnh — Con nào cũng mạnh, bạn thích con nào chọn con đó:</p>
+<div id="imgAIGrid" class="ai-grid"></div>
+<p id="imgAIHint" class="muted" style="background:#151527;padding:10px;border-radius:12px">Đang chọn: <b>Google Flow</b> — 50 credits / ngày. Bấm 1 con để chọn, bấm <b>Nhận free hôm nay</b> để vào thẳng chỗ nhận credits.</p>
+<div id="imgKeyArea"></div>
+<div id="imgCreditsAlert" class="credits-alert">⚠️ <b>Hết credits ở con này rồi!</b> Hãy đổi sang con AI khác bên trên để xài tiếp free hôm nay. Bấm <b>Nhận free hôm nay</b> ở con mới để nhận lượt.</div>
+
+<p style="font-weight:800;margin-top:14px">✍️ Mô tả ảnh bạn muốn (Prompt)</p>
+<textarea id="imgPrompt" class="prompt-box" placeholder="VD: Cô gái Việt Nam 20 tuổi, tóc dài đen, mặc áo dài trắng, đứng ở phố cổ Hội An, nắng vàng, ảnh chụp bằng iPhone, siêu thật..."></textarea>
+<div class="style-row">
+<button class="style-pill active" onclick="pickStyle(this,'Ảnh thật, chụp bằng iPhone')">📷 Ảnh thật</button>
+<button class="style-pill" onclick="pickStyle(this,'Phong cách anime, mắt to')">🎌 Anime</button>
+<button class="style-pill" onclick="pickStyle(this,'Phong cách 3D Pixar')">🧸 3D Pixar</button>
+<button class="style-pill" onclick="pickStyle(this,'Phong cách Hàn Quốc, studio')">🇰🇷 Hàn Quốc</button>
+<button class="style-pill" onclick="pickStyle(this,'Phong cách thời trang, tạp chí')">👗 Thời trang</button>
+</div>
+<p style="font-weight:800;margin-top:14px">🖼️ Thêm ảnh mẫu (nếu có) — <span style="font-weight:400;color:#a1a1aa">KHÔNG bắt buộc, không có vẫn tạo được</span></p>
+<div class="upload" onclick="document.getElementById('refImg').click()">📸 Bấm để thêm ảnh mẫu (nếu có)<br><span class="muted">AI sẽ vẽ ảnh mới theo mặt / dáng / phong cách của ảnh này — JPG / PNG</span><input type="file" id="refImg" accept="image/*" hidden="" onchange="showRefImg(this)"></div>
+<img id="refPrev" class="preview">
+<div id="refOk" class="ok">✅ Đã có ảnh mẫu — AI sẽ vẽ theo ảnh này!</div>
+<div class="row" style="justify-content:center;display:none" id="refActions"><button class="btn btn-dark" onclick="clearRefImg()">🗑️ Xóa ảnh mẫu — Vẽ từ prompt thôi</button></div>
+<p class="muted" style="font-size:12px">VD: Bạn up ảnh mặt bạn lên, AI vẽ bạn mặc áo dài ở Hội An. Không up thì AI tự vẽ người mới theo prompt.</p>
+
+<p style="font-weight:800">📐 Tỉ lệ ảnh</p>
+<div class="ratio-row">
+<button class="ratio-btn active" id="ratio-9-16" onclick="pickRatio('9:16')">9:16<br><span style="font-size:11px">TikTok / Reels</span></button>
+<button class="ratio-btn" id="ratio-1-1" onclick="pickRatio('1:1')">1:1<br><span style="font-size:11px">Avatar</span></button>
+<button class="ratio-btn" id="ratio-16-9" onclick="pickRatio('16:9')">16:9<br><span style="font-size:11px">Ngang</span></button>
+</div>
+<p style="font-weight:800;margin-top:12px">💡 10 Prompt mẫu — Bấm là tự điền:</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái Việt Nam 20 tuổi, tóc dài đen, mặc áo dài trắng, đứng ở phố cổ Hội An, nắng vàng')">💡 Áo dài Hội An</button>
+<button class="btn btn-dark" onclick="fillPrompt('Chàng trai 22 tuổi, áo sơ mi trắng, đứng ở Đà Lạt, sương mù, ảnh phim')">💡 Đà Lạt</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái mặc đồ nhảy K-pop, sân khấu đèn neon, dáng nhảy năng động')">💡 K-pop</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô dâu Việt Nam mặc váy cưới trắng, cầm hoa hồng, đứng ở nhà thờ Đức Bà Sài Gòn, ảnh cưới lãng mạn')">💡 Cô dâu</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái mặc áo bà ba nâu, nón lá, đứng ở chợ nổi miền Tây, sông nước, nắng sớm')">💡 Áo bà ba miền Tây</button>
+<button class="btn btn-dark" onclick="fillPrompt('Chàng trai mặc vest đen, đứng ở quán cafe rooftop Sài Gòn ban đêm, đèn thành phố phía sau')">💡 Cafe rooftop</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái mặc bikini trắng, đứng ở biển Phan Thiết, cát trắng, biển xanh, nắng đẹp')">💡 Biển Phan Thiết</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái mặc áo dài đỏ, cầm lì xì, đứng trước hoa đào ngày Tết, phố phường trang trí Tết')">💡 Tết áo dài đỏ</button>
+<button class="btn btn-dark" onclick="fillPrompt('Chàng trai mặc đồ thể thao, tập gym, cơ bắp, phòng gym hiện đại, ánh sáng mạnh')">💡 Gym</button>
+<button class="btn btn-dark" onclick="fillPrompt('Cô gái mặc áo dài cách tân, đứng ở phố đi bộ Nguyễn Huệ, đèn lồng, buổi tối')">💡 Phố đi bộ</button>
+</div>
+
+<button class="btn btn-pink btn-big" style="margin-top:12px" onclick="createAIImage()">🎨 TẠO ẢNH AI — FREE — Web request AI bằng Key</button>
+<div id="imgLoad" class="loadbox">⏳ Đang vẽ ảnh...</div>
+<img id="imgResult" class="preview">
+<p id="imgStatus" class="muted" style="text-align:center"></p>
+<div class="row" id="imgActions" style="display:none;justify-content:center">
+<button class="btn btn-purple" onclick="useImgForDance()">💃 Dùng ảnh này qua Mục 2 để nhảy</button>
+<button class="btn btn-dark" onclick="downloadImgResult()">⬇️ Tải ảnh về</button>
+</div>
+<p class="muted" style="margin-top:8px">Chưa có API Key? Mấy con free hằng ngày này cho free trong <b>app của nó</b> (Flow, Kling, Dreamina...). Bấm link <b>Lấy FREE</b> ở <b>⚙️ Cài đặt</b> để vào app đó tạo luôn, sáng nào cũng có free mới.</p>
+</div>
+
+<!-- ===== MUC 2: ANH NHAY THEO VIDEO MAU ===== -->
+<div id="studio2" class="card" style="border-color:#ec4899;scroll-margin-top:140px;display:none">
+<h2>💃 MỤC 2 — ẢNH MẪU NHẢY THEO VIDEO MẪU</h2>
+<p class="muted">AI sẽ: 1) Đọc ảnh mẫu 2) Đọc chuyển động video mẫu 3) Vẽ lại người trong ảnh nhảy như video mẫu.</p>
+
+<h2 style="margin-top:16px">📸 1. Upload ảnh người</h2>
+<div class="upload" onclick="document.getElementById('file').click()">Bấm để chọn ảnh<br><span class="muted">JPG / PNG — ảnh rõ mặt, thấy toàn thân càng tốt</span><input type="file" id="file" accept="image/*" hidden="" onchange="showImg(this)"></div>
+<img id="prev" class="preview"><div id="imgOk" class="ok">✅ Đã có ảnh người — qua bước 2 nhé!</div>
+<p class="muted" style="text-align:center">Hoặc bấm <b>🎨 Tạo ảnh AI ở Mục 1</b> rồi bấm <b>Dùng ảnh này qua Mục 2</b> là tự nhảy qua đây luôn.</p>
+
+<h2 style="margin-top:18px">🎬 2. Tải lên Video mẫu</h2>
+<p class="muted">Tải video nhảy trend bạn thích lên đây, AI sẽ cho người trong ảnh nhảy theo video đó.</p>
+<div class="upload" onclick="document.getElementById('sampleVideo').click()">🎬 Bấm để tải lên Video mẫu<br><span class="muted">MP4 / MOV — dưới 50MB • TikTok / K-pop / Hip-hop...</span><input type="file" id="sampleVideo" accept="video/*" hidden="" onchange="showSampleVideo(this)"></div>
+<video id="samplePrev" controls="" style="width:100%;border-radius:14px;display:none;margin-top:10px"></video>
+<p id="sampleName" class="muted" style="text-align:center"></p>
+<div class="row" style="justify-content:center"><button class="btn btn-purple" onclick="useSample()">✨ Dùng video này làm mẫu nhảy</button><button class="btn btn-dark" onclick="clearSample()">🗑️ Xóa video mẫu</button></div>
+
+<h2 style="margin-top:18px">🔑 3. Chọn AI - Xoay lượt miễn phí hằng ngày</h2>
+<p class="muted">Veo / Grok không cho web gọi API free trực tiếp (free của nó chỉ trong app Flow / Grok). Nên web dùng <b>bên trung gian cho free credits API</b> để gọi được AI top: hết free bên này thì đổi sang bên kia.</p>
+<div id="vidAIGrid" class="ai-grid"></div>
+<p id="providerHint" class="muted" style="background:#151527;padding:10px;border-radius:12px">Đang chọn: <b>Google Flow - Veo 3.1</b> — 50 credits / ngày. Bấm 1 con để chọn.</p>
+<div id="vidKeyArea"></div>
+<div id="vidCreditsAlert" class="credits-alert">⚠️ <b>Hết credits ở con này rồi!</b> Hãy đổi sang con AI khác bên trên để xài tiếp free hôm nay. Bấm <b>Nhận free hôm nay</b> ở con mới để nhận lượt.</div>
+<div style="margin:10px 0"><button class="btn btn-pink btn-big" style="background:#22c55e" onclick="openAllFree()">🚀 MỞ HẾT 10 WEB NHẬN FREE HÔM NAY — 1 click</button></div>
+<div id="vidKeyAreaPlaceholder" style="display:none"></div>
+
+<h2 style="margin-top:18px">🎬 4. Tạo video mới bằng AI thật</h2>
+<p class="muted">Bấm Tạo chỉ hiện <b>Load</b>, AI chạy trên server, không tự phát video mẫu.</p>
+<button id="createBtn" class="btn btn-pink btn-big" onclick="createRealAI()">🤖 TẠO VIDEO BẰNG AI THẬT — Người trong ảnh nhảy theo video mẫu</button>
+<div id="loadBox" class="loadbox">⏳ Đang load...</div>
+<p id="danceStatus" class="muted" style="text-align:center;margin-top:10px"></p>
+<video id="outVideo" controls="" style="width:100%;border-radius:14px;display:none;margin-top:10px"></video>
+<a id="dlLink" style="display:none;background:#ec4899;color:#fff;padding:14px;border-radius:999px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none">⬇️ Tải video mới về máy</a>
+</div>
+</div>
+<div id="credits" style="display:none">
+<div class="credits-hero"><h2>💳 NẠP CREDITS</h2><p>Mua bao nhiêu dùng bấy nhiêu • Không hết hạn • 1 credit = 1 video 5s</p></div>
+
+<div class="bank-card">
+<div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:18px">🏦 MB Bank</b><span style="background:#ef4444;color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px">NAPAS 24/7</span></div>
+<div class="bank-row"><span><div class="bank-label">Số tài khoản</div><div class="bank-value">212119</div></span><button class="copy-mini" onclick="copyText('212119')">📋 Copy STK</button></div>
+<div class="bank-row"><span><div class="bank-label">Chủ tài khoản</div><div class="bank-value">Diệp Minh Thuận</div></span><span style="font-size:20px">✅</span></div>
+<div class="bank-row"><span><div class="bank-label">Nội dung chuyển khoản</div><div class="bank-value" id="napND" style="font-size:15px;color:#fde68a">NAP KHACH 10000</div></span><button class="copy-mini" onclick="copyText(document.getElementById('napND').textContent)">📋 Copy ND</button></div>
+</div>
+
+<div class="user-box">
+<label>👤 1. Tên người dùng của bạn</label>
+<input id="napUser" value="KHACH" maxlength="15" placeholder="VD: THUAN, GUM, KHACH..." oninput="updateNap()">
+<div style="font-size:12px;color:#64748b;margin-top:4px">Tên này sẽ hiện trong nội dung chuyển khoản để Admin biết cộng credits cho ai.</div>
+<div class="nd-preview">
+<div style="font-size:12px;color:#92400e;font-weight:700">NỘI DUNG = Nạp → Tên người dùng → Số tiền</div>
+<div class="nd-big" id="napND2">NAP KHACH 10000</div>
+<div style="font-size:12px;color:#64748b">Ví dụ: Bạn tên <b>THUAN</b> nạp 10.000đ → Nội dung là <b>NAP THUAN 10000</b></div>
+</div>
+</div>
+
+<p style="font-weight:900;margin:14px 0 0">💎 2. Chọn gói nạp</p>
+<div class="pack-grid">
+<div class="pack-card active" id="pack-10000" onclick="selectPack(10000,10)"><div class="p-name">⚡ Gói 10</div><div class="p-credit">10 credits</div><div class="p-price">10.000đ</div></div>
+<div class="pack-card" id="pack-49000" onclick="selectPack(49000,50)"><span class="p-tag">PHỔ BIẾN</span><div class="p-name">🔥 Gói 49</div><div class="p-credit">50 credits</div><div class="p-price">49.000đ</div></div>
+<div class="pack-card" id="pack-99000" onclick="selectPack(99000,110)"><span class="p-tag">TIẾT KIỆM</span><div class="p-name">💎 Gói 99</div><div class="p-credit">110 credits</div><div class="p-price">99.000đ</div></div>
+<div class="pack-card" id="pack-199000" onclick="selectPack(199000,250)"><span class="p-tag">VIP</span><div class="p-name">👑 Gói 199</div><div class="p-credit">250 credits</div><div class="p-price">199.000đ</div></div>
+</div>
+
+<div class="qr-card">
+<div style="font-size:13px;font-weight:800;color:#ec4899">📷 3. QUÉT MÃ ĐỂ CHUYỂN KHOẢN</div>
+<div class="qr-amount" id="qrAmount">10.000đ</div>
+<div class="qr-bank">MB Bank • 212119 • Diệp Minh Thuận</div>
+<div style="margin:10px 0;min-height:230px;display:flex;align-items:center;justify-content:center">
+<img id="qrImg" src="https://img.vietqr.io/image/MB-212119-print.png?amount=10000&amp;addInfo=NAP%20KHACH%2010000&amp;accountName=DIEP%20MINH%20THUAN" alt="QR MB Bank" onerror="qrFallback(this)">
+</div>
+<div id="qrStatus" class="qr-loading">⚠️ QR không tải được do mạng. Bạn chuyển khoản thủ công: <b>MB Bank - 212119 - Diệp Minh Thuận - Nội dung: NAP KHACH 10000</b></div>
+<button class="btn btn-dark" style="margin-top:8px;border:1px solid #e2e8f0" onclick="reloadQR()">🔄 Tải lại QR</button>
+<div style="font-size:12px;color:#64748b;margin-top:8px">QR tự đổi theo <b>tên bạn + gói bạn chọn</b> — quét là chuyển đúng, không cần gõ tay</div>
+</div>
+
+<div class="step-box">
+<b>✅ 4. Sau khi chuyển:</b><br>
+1. Chụp bill chuyển khoản<br>
+2. Gửi bill qua <b>Zalo 0327.43.93.73 (Gum)</b> hoặc Gmail <b>dgum99@gmail.com</b><br>
+3. Admin cộng credits trong 1-5 phút
+</div>
+<div class="row"><button class="btn btn-pink btn-big" onclick="alert('Đã gửi yêu cầu! Hãy gửi bill qua Zalo 0327.43.93.73 để Admin cộng credits nhé!')">✅ Tôi đã chuyển khoản</button></div>
+<div class="row" style="margin-top:8px"><button class="btn btn-purple" style="flex:1" onclick="alert('Zalo Admin: 0327.43.93.73 (Gum)')">💬 Gửi bill qua Zalo</button><button class="btn btn-dark" style="flex:1" onclick="copyText(document.getElementById('napND').textContent)">📋 Copy nội dung</button></div>
+<p class="muted" style="margin-top:10px;text-align:center">🎁 Dùng thử: 1 credit — 0đ <button class="btn btn-dark" style="padding:8px 14px" onclick="alert('Đã nhận 1 credit!')">Nhận</button></p>
+</div>
+<div id="account" style="display:none"><div class="card" id="accountCard">
+<div id="cloudStatus" style="background:#151527;border-radius:12px;padding:10px;margin-bottom:12px;font-size:13px">☁️ <b>Đồng bộ tài khoản:</b> <span id="cloudStatusText">Đang xài lưu trên máy (chưa có cloud) — Update file / đổi máy sẽ phải đăng ký lại.</span><br><span style="font-size:12px;color:#aaa">Muốn không phải đăng ký lại nữa: Vào <b>🔐 Admin → Đồng bộ Cloud</b> nhập Supabase URL + Key 1 lần là xong.</span></div>
+<h2>👤 Tài khoản</h2>
+<div id="accountLoggedOut">
+<p class="muted">Chưa đăng nhập. Đăng ký để nhận <b>2 video Free</b> và lưu video của bạn. Tài khoản lưu trên máy bạn, không cần email.</p>
+<div style="display:flex;gap:8px;margin-bottom:12px"><button class="btn btn-pink" id="btnShowRegister" style="flex:1" onclick="showRegisterForm()">👤 Đăng ký miễn phí</button><button class="btn btn-dark" id="btnShowLogin" style="flex:1" onclick="showLoginForm()">➜ Đăng nhập</button></div>
+<div id="registerForm">
+<p style="font-weight:800">👤 Tạo tài khoản mới — 30 giây</p>
+<input id="regUser" type="text" placeholder="Tên đăng nhập — VD: THUAN (viết liền, không dấu)" style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<input id="regPass" type="password" placeholder="Mật khẩu — VD: 123456" style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<input id="regPass2" type="password" placeholder="Nhập lại mật khẩu" style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<button class="btn btn-pink btn-big" onclick="doRegister()">✅ TẠO TÀI KHOẢN</button>
+<p class="muted" style="font-size:12px;margin-top:8px">Tên đăng nhập này cũng là tên bạn dùng để nạp credits: chuyển khoản ghi <b>NAP + tên đăng nhập + số tiền</b>. VD: <b>NAP THUAN 10000</b></p>
+<p id="regMsg" class="muted"></p>
+</div>
+<div id="loginForm" style="display:none">
+<p style="font-weight:800">➜ Đăng nhập tài khoản đã có</p>
+<input id="loginUser" type="text" placeholder="Tên đăng nhập" style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<input id="loginPass" type="password" placeholder="Mật khẩu" style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<button class="btn btn-pink btn-big" onclick="doLogin()">➜ ĐĂNG NHẬP</button>
+<p id="loginMsg" class="muted"></p>
+</div>
+</div>
+<div id="accountLoggedIn" style="display:none">
+<p style="font-weight:800;font-size:18px">👋 Xin chào, <span id="accName"></span>!</p>
+<p class="muted">Tài khoản của bạn đã tạo thành công. Bạn có thể tạo video, nạp credits bằng tên này.</p>
+<div style="background:#151527;border-radius:12px;padding:12px;margin:10px 0">🪙 Credits: <b id="accCredits"></b> • Tên nạp tiền: <b id="accNapName"></b><br><span style="font-size:12px;color:#aaa">Khi chuyển khoản nhớ ghi: <b id="accNapExample"></b></span></div>
+<div class="row"><button class="btn btn-pink" style="flex:1" onclick="showTab('studio');window.scrollTo({top:0,behavior:'smooth'})">🎬 Về Studio tạo ngay</button><button class="btn btn-dark" style="flex:1" onclick="doLogout()">🚪 Đăng xuất</button></div>
+<button class="btn btn-dark" style="width:100%;margin-top:8px;color:#f87171" onclick="deleteAccount()">🗑️ Xóa tài khoản này</button>
+</div>
+</div></div>
+<div id="admin" style="display:none">
+<div class="card" id="adminLoginBox" style="border-color:#ef4444">
+<h2>🔐 Admin — Chỉ bạn mới vào được</h2>
+<p class="muted">Nhập mật khẩu Admin để xem toàn bộ người dùng. Đổi mật khẩu này trong code: tìm <b>gum_admin_pass</b>. Mật khẩu Admin hiện tại: <b>Gumprovipno1</b> — Nhớ đổi ngay sau khi up web!</p>
+<input id="adminPass" type="password" placeholder="Nhập mật khẩu Admin..." style="width:100%;padding:13px;border-radius:12px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<button class="btn btn-pink btn-big" onclick="doAdminLogin()">🔓 VÀO TRANG ADMIN</button>
+<p class="muted" style="font-size:12px">⚠️ Hiện tại V26 vẫn lưu user trên máy từng người, nên trang Admin này mới chỉ xem được user trên máy bạn + user bạn thêm tay. Muốn xem được TOÀN BỘ user thật thì phải làm thêm Bước 2 (SePay + Database) ở dưới.</p>
+</div>
+<div class="card" id="adminPanel" style="display:none;border-color:#22c55e">
+<h2>📊 Quản lý người dùng — Admin</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0">
+<div style="background:#151527;border-radius:12px;padding:12px;text-align:center"><b style="font-size:24px" id="statTotal">0</b><br><span style="font-size:12px">Tổng người đăng ký</span></div>
+<div style="background:#151527;border-radius:12px;padding:12px;text-align:center"><b style="font-size:24px" id="statOnline">1</b><br><span style="font-size:12px">Đang online (máy bạn)</span></div>
+<div style="background:#151527;border-radius:12px;padding:12px;text-align:center"><b style="font-size:24px" id="statCredits">0</b><br><span style="font-size:12px">Tổng credits đã bán</span></div>
+<div style="background:#151527;border-radius:12px;padding:12px;text-align:center"><b style="font-size:24px" id="statToday">0</b><br><span style="font-size:12px">Đăng ký hôm nay</span></div>
+</div>
+<p style="font-weight:800">🔍 Tìm user:</p>
+<input id="adminSearch" type="text" placeholder="Gõ tên đăng nhập... VD: THUAN" oninput="renderAdmin()" style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:10px">
+<div id="adminUserList"></div>
+<div style="background:#1e1b4b;border-radius:12px;padding:12px;margin-top:12px">
+<b>💰 Cộng credits tay — Khi ngân hàng báo đã nhận tiền mà chưa tự cộng:</b><br><span style="font-size:12px">Bạn nhận được tiền rồi nhưng web chưa tự cộng? Nhập tên + số credits rồi bấm Cộng là khách có credits ngay.</span><br>
+<div class="row" style="margin-top:8px"><input id="adminAddUser" type="text" placeholder="Tên user VD: THUAN" style="flex:1;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff"><input id="adminAddCredits" type="number" placeholder="Số credits VD: 12" style="flex:1;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff"></div>
+<button class="btn btn-pink" style="width:100%;margin-top:8px" onclick="adminAddCredits()">💰 CỘNG CREDITS CHO KHÁCH</button>
+</div>
+<button class="btn btn-dark" style="width:100%;margin-top:10px" onclick="doAdminLogout()">🚪 Thoát Admin</button>
+</div>
+<div class="card" style="border-color:#22c55e">
+<h2>☁️ Đồng bộ Cloud — Để update file không mất tài khoản</h2>
+<p style="font-size:13px;line-height:1.8">
+<b>Vì sao update file lại mất acc?</b> Vì V26 lưu acc trên máy (localStorage). Đổi link / xóa cache / đổi máy là mất.<br>
+<b>Cách sửa (5 phút, làm 1 lần):</b><br>
+<b>1.</b> Vào <b>supabase.com</b> → Tạo project miễn phí → Vào Settings → API → Copy <b>Project URL</b> + <b>anon public key</b><br>
+<b>2.</b> Dán 2 cái đó vào 2 ô dưới → Bấm <b>Lưu Cloud</b><br>
+<b>3.</b> Từ giờ acc lưu trên cloud, update file / đổi máy / đổi trình duyệt vẫn đăng nhập được, không phải đăng ký lại.
+</p>
+<input id="supaUrl" type="text" placeholder="Supabase Project URL — VD: https://xyz.supabase.co" style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<input id="supaKey" type="text" placeholder="Supabase anon public key — Dán key dài vào đây..." style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-bottom:8px">
+<button class="btn btn-pink" style="width:100%" onclick="saveSupa()">💾 LƯU CLOUD — Đồng bộ tài khoản</button>
+<p id="supaMsg" class="muted" style="font-size:12px"></p>
+<p style="font-size:12px;color:#aaa">Chưa nhập Supabase thì web vẫn xài lưu trên máy như cũ, không lỗi. Nhập xong thì acc mới sẽ lưu lên cloud, acc cũ trên máy bạn bấm <b>Đồng bộ acc cũ lên cloud</b> ở dưới để chuyển lên.</p>
+<button class="btn btn-dark" style="width:100%" onclick="syncOldToCloud()">🔄 Đồng bộ acc cũ trên máy này lên cloud</button>
+</div>
+<div class="card" style="border-color:#f59e0b">
+<h2>🤖 Tự động cộng credits khi ngân hàng nhận tiền — Cách làm (15 phút)</h2>
+<p style="font-size:13px;line-height:1.8">
+<b>Vì sao chưa tự động được?</b> Web bạn đang là web tĩnh, ngân hàng MB không tự báo về web được. Phải qua <b>SePay</b> làm trung gian.<br><br>
+<b>Bước 1 — Đăng ký SePay (miễn phí):</b> Vào <b>sepay.vn</b> → Đăng ký → Liên kết tài khoản <b>MB Bank 212119 - DIEP MINH THUAN</b><br>
+<b>Bước 2 — Tạo Webhook:</b> Trong SePay → Webhook → Thêm URL: <b>https://gum-rho.vercel.app/api/sepay-webhook</b><br>
+<b>Bước 3 — Thêm file API lên Vercel:</b> Trong repo Gum, tạo thư mục <b>api</b> → tạo file <b>sepay-webhook.js</b> với code mình để sẵn ở dưới (copy trong Admin → nút Xem code webhook)<br>
+<b>Bước 4 — Test:</b> Chuyển khoản 10.000đ ghi <b>NAP THUAN 10000</b> → SePay báo về → Web tự đọc nội dung → Cộng <b>12 credits</b> cho THUAN ngay, không cần bạn bấm gì.<br><br>
+<b>Trong lúc chưa làm SePay:</b> Bạn cứ dùng ô <b>Cộng credits tay</b> ở trên. Ngân hàng báo tiền về điện thoại → bạn vào Admin → nhập tên + credits → bấm Cộng là khách có ngay.
+</p>
+<button class="btn btn-dark" style="width:100%" onclick="showWebhookCode()">📄 Xem code file sepay-webhook.js để copy lên Vercel</button>
+<pre id="webhookCode" style="display:none;white-space:pre-wrap;background:#0f0f1e;padding:12px;border-radius:12px;font-size:11px;margin-top:10px">// File: api/sepay-webhook.js — Copy file này lên repo Gum, thư mục api/
+// SePay sẽ gửi POST về đây mỗi khi có tiền vào MB Bank 212119
+export default async function handler(req, res){
+  if(req.method!=='POST') return res.status(200).json({ok:true});
+  const body = req.body || {};
+  // SePay gửi: content = "NAP THUAN 10000", transferAmount = 10000
+  const content = (body.content || body.description || '').toUpperCase();
+  const amount = Number(body.transferAmount || body.amount || 0);
+  // Tách tên: NAP THUAN 10000 -&gt; THUAN
+  const m = content.match(/NAP\s+([A-Z0-9]+)\s+(\d+)/);
+  if(!m) return res.status(200).json({ok:true, skip:'khong dung dinh dang'});
+  const username = m[1];
+  // Map tiền -&gt; credits: 10000=12, 49000=75, 99000=175, 199000=390
+  let credits = 0;
+  if(amount===10000) credits=12;
+  else if(amount===49000) credits=75;
+  else if(amount===99000) credits=175;
+  else if(amount===199000) credits=390;
+  else credits = Math.floor(amount/1000);
+  // TODO: Cộng credits cho username vào Database (Supabase / Vercel KV)
+  // Sau khi làm Database ở Bước 2, thay dòng này bằng lệnh cộng thật
+  console.log('CONG CREDITS', username, credits);
+  return res.status(200).json({ok:true, username, credits});
+}</pre>
+</div>
+</div>
+<div id="settings" style="display:none">
+<div class="card" style="border-color:#a855f7"><h2>🔑 KHO API KEY — 10 CON AI TOP</h2>
+<p class="muted">CHỈ GIỮ CON FREE HẰNG NGÀY — Xóa hết con cho 1 lần rồi. Sáng nào vào cũng có free mới, khỏi lo hết. Hết con này đổi sang con khác là lại có.</p>
+<div style="background:#fef3c7;color:#111;border-radius:12px;padding:12px;font-size:13px"><b>💡 Cách lấy FREE HẰNG NGÀY (làm 1 lần, 15 phút là xong hết):</b><br>
+1. Bấm link <b>Lấy FREE →</b> ở từng con bên dưới → Đăng ký bằng Gmail<br>2. Sáng nào cũng vào lại app đó 1 lần — Free tự hồi lại, không cần đăng ký lại<br>
+2. Vào mục <b>API Keys / Dashboard</b> → Tạo key mới → Copy key<br>
+3. Dán key vào ô bên dưới → Bấm <b>Lưu</b> → Nó hiện <b>✅ Đã lưu</b> là xong<br>
+4. Hôm sau hết free → Vào web đó đăng ký thêm 1 acc Gmail khác → Lấy key mới → Dán đè lên là lại có free tiếp</div>
+<p style="font-weight:800;margin-top:12px"></p><div style="background:#064e3b;border-radius:12px;padding:12px;font-size:13px;margin-top:10px"><b>🔄 Cách xài free MỖI NGÀY cho đã:</b><br>• <b>Con cho free mỗi ngày (Google Flow, Kling, Luma):</b> Sáng nào vào app đó bấm tạo 1-2 video là nó tự hồi free, không cần làm gì thêm.<br>• <b>Con chỉ cho 1 lần (Fal, Kie, WaveSpeed):</b> Đăng ký 2-3 Gmail khác nhau, mỗi Gmail lấy 1 key, hết key này đổi sang key kia là lại có free. Web này lưu được nhiều key, bạn cứ dán đè key mới lên là xong.<br>• <b>Con cho theo tuần (Grok):</b> Để dành, cuối tuần xài 1 lần cho đỡ phí.</div>
+<div class="auto-box">
+<h2 style="margin:0">⚡ LẤY FREE HẰNG NGÀY — GẦN NHƯ TỰ ĐỘNG</h2>
+<p style="font-size:13px;margin:8px 0">Web <b>không tự lấy key giùm</b> được vì cần đăng nhập Gmail + captcha của bạn. Nhưng làm theo cách này chỉ mất <b>2 phút mỗi sáng</b> là có full free: Login → Lấy API Key → Dán vào Studio là web tự request AI chạy.</p>
+<div style="background:#fff;color:#111;border-radius:12px;padding:12px;font-size:13px;line-height:1.7"><b>🔥 Cách nhanh nhất (2 phút):</b><br>
+<b>Bước 1:</b> Bấm nút <b>MỞ HẾT 10 TRANG</b> bên dưới → Nó mở 10 tab 1 lần<br>
+<b>Bước 2:</b> Mỗi tab chỉ cần bấm <b>Đăng nhập bằng Google</b> (nó tự nhớ Gmail của bạn, không cần gõ mật khẩu lại)<br>
+<b>Bước 3 (chỉ làm 1 lần đầu):</b> Copy <b>API Key</b> → về Studio <b>dán 1 lần</b> → Bấm <b>Lưu Key</b>.<br><b>Mỗi ngày sau:</b> Chỉ cần bấm <b>Mở hết 10 web</b> để nhận free, <b>không cần dán key lại</b> → Bấm <b>Tạo</b> là web tự request AI chạy!<br>
+<b>💡 Mẹo:</b> Dùng 1 Gmail cho hết 10 con, Chrome nó tự đăng nhập hết, khỏi gõ lại.</div>
+<button class="auto-btn" onclick="openAllFree()">🚀 MỞ HẾT 10 TRANG LẤY FREE 1 LẦN</button>
+<button class="auto-btn2" onclick="openTodayChecklist()">📋 MỞ CHECKLIST HÔM NAY — Tick con nào đã lấy free</button>
+<p style="font-size:12px;opacity:.9;margin:6px 0 0">⚠️ Đừng đưa mật khẩu Gmail cho web hay bot nào — Web này không bao giờ hỏi mật khẩu của bạn.</p>
+</div>
+<div id="todayChecklist" style="display:none"></div>
+<p style="font-weight:800;margin-top:12px">📊 Đã lưu: <span id="apiCount">0/10</span> con • <button class="btn btn-dark" style="padding:8px 14px" onclick="showTab('studio');switchStudio(1);window.scrollTo({top:0,behavior:'smooth'})">🎨 Về Studio tạo ngay</button></p>
+
+<div id="apiList"><div class="api-card "><div class="api-top"><div><div class="api-name">🔵 Google Flow (Veo + Imagen + Nano Banana) <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh + Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Veo 3.1 + Imagen 4 + Nano Banana — Con ngon nhất, ảnh + video đều làm được</div><div style="font-size:12px;color:#fde68a">💰 50 credits / ngày, qua đêm tự hồi lại — Sáng dậy là có lại!</div><div style="font-size:12px">🔗 <a class="api-link" href="https://flow.google.com" target="_blank">Lấy FREE → flow.google.com</a> • flow.google.com → Đăng nhập Gmail là có</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-google" type="password" placeholder="Dán API Key của 🔵 Google Flow (Veo + Imagen + Nano Banana) vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('google')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🎬 Kling AI <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Kling 2.1 làm video nhảy rất mượt, mặt đẹp</div><div style="font-size:12px;color:#fde68a">💰 66 credits / ngày, tự hồi mỗi 24h — Làm được ~2 video nhảy / ngày</div><div style="font-size:12px">🔗 <a class="api-link" href="https://klingai.com" target="_blank">Lấy FREE → klingai.com</a> • klingai.com → Đăng nhập mỗi ngày</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-kling" type="password" placeholder="Dán API Key của 🎬 Kling AI vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('kling')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">⚡ PixVerse <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">PixVerse V6 — Làm video anime, stylized nhanh, có tiếng</div><div style="font-size:12px;color:#fde68a">💰 30 credits / ngày + 60 tặng khi đăng ký — Làm video ngắn, Reels</div><div style="font-size:12px">🔗 <a class="api-link" href="https://pixverse.ai" target="_blank">Lấy FREE → pixverse.ai</a> • pixverse.ai → Đăng nhập</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-pixverse" type="password" placeholder="Dán API Key của ⚡ PixVerse vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('pixverse')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🌙 Dreamina / Seedance (ByteDance) <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh + Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Seedance 2.0 của TikTok — Làm video + ảnh, nhiều lượt nhất</div><div style="font-size:12px;color:#fde68a">💰 ~120 credits / ngày — Làm được ~10-20 clip ngắn / ngày</div><div style="font-size:12px">🔗 <a class="api-link" href="https://dreamina.capcut.com" target="_blank">Lấy FREE → dreamina.capcut.com</a> • dreamina.capcut.com → Đăng nhập TikTok / Gmail</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-dreamina" type="password" placeholder="Dán API Key của 🌙 Dreamina / Seedance (ByteDance) vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('dreamina')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🦁 Leonardo AI <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh + Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Phoenix + Flux — Vẽ ảnh game, thời trang, ảnh thật</div><div style="font-size:12px;color:#fde68a">💰 150 tokens / ngày — Vẽ được 15-30 ảnh / ngày</div><div style="font-size:12px">🔗 <a class="api-link" href="https://leonardo.ai" target="_blank">Lấy FREE → leonardo.ai</a> • leonardo.ai → Đăng nhập</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-leonardo" type="password" placeholder="Dán API Key của 🦁 Leonardo AI vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('leonardo')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🔤 Ideogram <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Mạnh nhất khi ảnh có chữ, logo, poster, áo thun</div><div style="font-size:12px;color:#fde68a">💰 ~25-40 ảnh / ngày — Chữ trong ảnh không bị sai</div><div style="font-size:12px">🔗 <a class="api-link" href="https://ideogram.ai" target="_blank">Lấy FREE → ideogram.ai</a> • ideogram.ai → Đăng nhập bằng Google</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-ideogram" type="password" placeholder="Dán API Key của 🔤 Ideogram vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('ideogram')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">💃 Viggle <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Video nhảy</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Chuyên cho người trong ảnh nhảy, múa — Đúng món của web mình!</div><div style="font-size:12px;color:#fde68a">💰 5 video / ngày — Cho ảnh nhảy theo video mẫu</div><div style="font-size:12px">🔗 <a class="api-link" href="https://viggle.ai" target="_blank">Lấy FREE → viggle.ai</a> • viggle.ai → Đăng nhập</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-viggle" type="password" placeholder="Dán API Key của 💃 Viggle vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('viggle')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🗣️ Vidnoz <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Video nói</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Làm video nói chuyện, avatar nói theo giọng</div><div style="font-size:12px;color:#fde68a">💰 30 credits / ngày — Làm video avatar nói ~60s</div><div style="font-size:12px">🔗 <a class="api-link" href="https://vidnoz.com" target="_blank">Lấy FREE → vidnoz.com</a> • vidnoz.com → Đăng nhập</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-vidnoz" type="password" placeholder="Dán API Key của 🗣️ Vidnoz vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('vidnoz')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🎨 Adobe Firefly <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh + Video</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">Ảnh + Video của Adobe, xài thương mại được, không sợ bản quyền</div><div style="font-size:12px;color:#fde68a">💰 Cho lượt tạo free mỗi ngày, ảnh không watermark, xài bán hàng được</div><div style="font-size:12px">🔗 <a class="api-link" href="https://firefly.adobe.com" target="_blank">Lấy FREE → firefly.adobe.com</a> • firefly.adobe.com → Đăng nhập Adobe</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-firefly" type="password" placeholder="Dán API Key của 🎨 Adobe Firefly vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('firefly')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div><div class="api-card "><div class="api-top"><div><div class="api-name">🖼️ Bing Designer (DALL-E 3) <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">Ảnh</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;background:#064e3b;color:#6ee7b7">🔄 FREE MỖI NGÀY</span></div><div class="api-desc">DALL-E 3 của Microsoft — Vẽ ảnh nhanh, không cần cài gì</div><div style="font-size:12px;color:#fde68a">💰 15 ảnh nhanh / ngày + tạo chậm không giới hạn — Vẽ ảnh mẫu cho Mục 1</div><div style="font-size:12px">🔗 <a class="api-link" href="https://designer.microsoft.com" target="_blank">Lấy FREE → designer.microsoft.com</a> • designer.microsoft.com → Đăng nhập Microsoft</div></div><span class="api-status no">⭕ Chưa có</span></div><input class="api-input" id="key-bing" type="password" placeholder="Dán API Key của 🖼️ Bing Designer (DALL-E 3) vào đây..." value=""><div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey('bing')">💾 Lưu key</button><button class="btn btn-purple" onclick="showTab('studio');switchStudio(1)">🎨 Dùng ngay</button></div></div></div>
+
+<div style="background:#151527;border-radius:12px;padding:12px;margin-top:12px">
+<b>🗑️ Xóa hết key?</b><br><span class="muted" style="font-size:12px">Key chỉ lưu trên máy bạn, không gửi cho ai. Đổi điện thoại thì phải nhập lại.</span><br>
+<button class="btn btn-dark" style="margin-top:8px" onclick="clearAllKeys()">🗑️ Xóa hết API Key</button>
+</div>
+</div>
+<div class="card"><h2>⚙️ Cài đặt chung</h2><p class="muted">Tên miền hiện tại: <b id="domain">1394907627046852.a.metaaiusercontent.com</b></p><p class="muted">Chất lượng: HD • Thời lượng video: 5s • Ảnh: 9:16 mặc định</p></div>
+</div>
+</div>
+<footer><div class="footer-title">GUM BOT AI</div><div class="footer-line">Telegram admin: <b>update</b></div><div class="footer-line">Zalo: <b>0327.43.93.73 (Gum)</b></div><div class="footer-line">Gmail: <b>dgum99@gmail.com</b></div><div class="muted" style="margin-top:10px"><span id="domain2">1394907627046852.a.metaaiusercontent.com</span> — 1 credit = 1 video 5s • Credits không hết hạn</div></footer>
+<script>
+var host=window.location.hostname||'gum-rho.vercel.app';document.getElementById('domain').textContent=host;document.getElementById('domain2').textContent=host;
+function toggleDrawer(){var d=document.getElementById('drawer');d.style.display=(d.style.display==='block'?'none':'block');}
+function selectMenu(v){document.getElementById('menuSelect').value=v;showTab(v);document.getElementById('drawer').style.display='none';window.scrollTo({top:200,behavior:'smooth'});}
+function showTab(id){['studio','credits','account','settings','admin'].forEach(function(x){document.getElementById(x).style.display=(x===id?'block':'none')});}
+function updateProviderHint(){
+  var pe=document.getElementById('provider'); var p=pe?pe.value:currentVidAI;
+  var h=document.getElementById('providerHint');
+  if(p==='google') h.innerHTML='Google Flow: vào <b>flow.google.com</b> login Gmail → lấy <b>API Key</b> → dán vào ô trên. Model: <b>Veo 3.1</b> — Ngon nhất, ưu tiên xài con này. Web sẽ dùng key này để request AI chạy trong Studio.';
+  if(p==='kling') h.innerHTML='Kling AI: vào <b>klingai.com</b> đăng nhập mỗi ngày là có <b>66 credits / ngày</b>. Model: <b>Kling 2.1</b> — Làm video nhảy rất mượt.';
+  if(p==='viggle') h.innerHTML='Viggle: vào <b>viggle.ai</b> đăng nhập là có <b>5 video / ngày</b>. Chuyên cho ảnh nhảy theo video mẫu, đúng món web mình.';
+  if(p==='pixverse') h.innerHTML='PixVerse: vào <b>pixverse.ai</b> đăng nhập là có <b>30 credits / ngày</b>. Model: <b>PixVerse V6</b> — Video anime, Reels.';
+  if(p==='dreamina') h.innerHTML='Dreamina: vào <b>dreamina.capcut.com</b> đăng nhập TikTok / Gmail là có <b>~120 credits / ngày</b>. Model: <b>Seedance 2.0</b> — Nhiều lượt nhất.';
+  if(p==='vidnoz') h.innerHTML='Vidnoz: vào <b>vidnoz.com</b> đăng nhập là có <b>30 credits / ngày</b>. Chuyên video avatar nói chuyện.';
+}
+function removeVN(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').replace(/[^A-Za-z0-9]/g,'').toUpperCase().slice(0,15)||'KHACH';}
+var currentAmount=10000, currentCredits=10, qrTry=0;
+function getNapUser(){var v=document.getElementById('napUser')?document.getElementById('napUser').value.trim():''; return removeVN(v);}
+function getNapND(){return 'NAP '+getNapUser()+' '+currentAmount;}
+function updateNap(){
+  var nd=getNapND();
+  var a=document.getElementById('napND'); if(a) a.textContent=nd;
+  var b=document.getElementById('napND2'); if(b) b.textContent=nd;
+  reloadQR();
+}
+function selectPack(amount, credits){
+  currentAmount=amount; currentCredits=credits;
+  document.querySelectorAll('.pack-card').forEach(function(el){el.classList.remove('active');});
+  var sel=document.getElementById('pack-'+amount); if(sel) sel.classList.add('active');
+  var qa=document.getElementById('qrAmount'); if(qa) qa.textContent=amount.toLocaleString('vi-VN')+'đ';
+  updateNap();
+}
+function buildQRUrl(template, amount, nd){
+  return 'https://img.vietqr.io/image/MB-212119-'+template+'.png?amount='+amount+'&addInfo='+encodeURIComponent(nd)+'&accountName=DIEP%20MINH%20THUAN';
+}
+function reloadQR(){
+  qrTry=0;
+  var img=document.getElementById('qrImg'); if(!img) return;
+  var nd=getNapND();
+  document.getElementById('qrStatus').textContent='Đang tải QR cho '+nd+'...';
+  img.src=buildQRUrl('compact', currentAmount, nd);
+}
+function qrFallback(img){
+  qrTry++;
+  var nd=getNapND();
+  if(qrTry===1){ img.src=buildQRUrl('qr_only', currentAmount, nd); document.getElementById('qrStatus').textContent='Đang thử mẫu QR khác...'; }
+  else if(qrTry===2){ img.src=buildQRUrl('print', currentAmount, nd); document.getElementById('qrStatus').textContent='Đang thử mẫu QR in...'; }
+  else { document.getElementById('qrStatus').innerHTML='⚠️ QR không tải được do mạng. Bạn chuyển khoản thủ công: <b>MB Bank - 212119 - Diệp Minh Thuận - Nội dung: '+nd+'</b>'; }
+}
+function copyText(t){try{navigator.clipboard.writeText(t);alert('Đã copy: '+t);}catch(e){prompt('Copy thủ công:',t);}}
+document.addEventListener('DOMContentLoaded',function(){var q=document.getElementById('qrImg'); if(q){q.onload=function(){document.getElementById('qrStatus').textContent='✅ QR đã sẵn sàng — quét để chuyển khoản';};}});
+var currentImgAI='google', currentImgAIName='Google Flow - Imagen + Nano Banana', currentStyle='Ảnh thật, chụp bằng iPhone', currentRatio='9:16';
+function switchStudio(n){
+  document.getElementById('studio1').style.display=n===1?'block':'none';
+  document.getElementById('studio2').style.display=n===2?'block':'none';
+  document.getElementById('tabBtn1').classList.toggle('active', n===1);
+  document.getElementById('tabBtn2').classList.toggle('active', n===2);
+}
+function goStudio(n){ switchStudio(n); var el=document.getElementById(n===1?'studio1':'studio2'); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+function selectImgAI_old(id,name){
+  currentImgAI=id; currentImgAIName=name;
+  document.querySelectorAll('.ai-chip').forEach(function(e){e.classList.remove('active');});
+  var el=document.getElementById('imgAI-'+id); if(el) el.classList.add('active');
+  var hints={'flux':'Đã chọn: <b>Google Flow - Imagen + Nano Banana</b> — Vẽ người thật rất đẹp, mặt không bị biến dạng. Chạy qua Fal / Kie / WaveSpeed đều được.','imagen':'Đã chọn: <b>Imagen 4 (Google)</b> — Con mạnh nhất của Google, ảnh siêu thật, ánh sáng đẹp.','grok':'Đã chọn: <b>Grok Imagine</b> — Con của xAI, vẽ ảnh nhanh, làm được cả video.','recraft':'Đã chọn: <b>Recraft V3</b> — Chuyên ảnh nghệ thuật, poster, thời trang.','ideogram':'Đã chọn: <b>Ideogram</b> — Mạnh nhất khi ảnh có chữ, logo, biển hiệu.','sdxl':'Đã chọn: <b>SDXL</b> — Nhanh, rẻ, có nhiều lượt free nhất.'};
+  document.getElementById('imgAIHint').innerHTML=hints[id]||name;
+}
+function pickStyle(el, txt){ currentStyle=txt; document.querySelectorAll('.style-pill').forEach(function(e){e.classList.remove('active');}); el.classList.add('active'); }
+function pickRatio(r){ currentRatio=r; document.querySelectorAll('.ratio-btn').forEach(function(e){e.classList.remove('active');}); var id='ratio-'+r.replace(':','-'); var el=document.getElementById(id); if(el) el.classList.add('active'); }
+function fillPrompt(t){ document.getElementById('imgPrompt').value=t; document.getElementById('imgPrompt').scrollIntoView({behavior:'smooth'}); }
+function showRefImg(input){
+  if(input.files&&input.files[0]){ var r=new FileReader(); r.onload=function(e){ var p=document.getElementById('refPrev'); p.src=e.target.result; p.style.display='block'; document.getElementById('refOk').style.display='block'; document.getElementById('refActions').style.display='flex'; }; r.readAsDataURL(input.files[0]); }
+}
+function clearRefImg(){
+  var f=document.getElementById('refImg'); if(f) f.value='';
+  var p=document.getElementById('refPrev'); p.src=''; p.style.display='none';
+  document.getElementById('refOk').style.display='none'; document.getElementById('refActions').style.display='none';
+  window.refImageUrl=null;
+}
+async function createAIImage(){
+  var prompt=document.getElementById('imgPrompt').value.trim();
+  if(!prompt){alert('Bạn gõ mô tả ảnh vào ô Prompt trước nhé! VD: Cô gái mặc áo dài ở Hội An'); return;}
+  var key=getActiveKey();
+  var load=document.getElementById('imgLoad'), st=document.getElementById('imgStatus'), img=document.getElementById('imgResult');
+  load.style.display='block'; load.textContent='⏳ Đang vẽ ảnh bằng '+currentImgAIName+'... Đợi 10-30s, đừng rời trang...';
+  st.textContent='⏳ AI đang vẽ: '+prompt+' — Phong cách: '+currentStyle+' — Tỉ lệ: '+currentRatio;
+  if(!key){
+    setTimeout(function(){
+      load.style.display='none';
+      st.innerHTML='⚠️ Chưa có API Key nên AI thật chưa vẽ được. Bạn xuống <b>Mục 2 → Bước 3</b> dán key Fal / Kie / WaveSpeed (đăng ký là có free credits) rồi bấm Tạo lại nhé. Web KHÔNG tự vẽ ảnh giả.';
+    },1200);
+    return;
+  }
+  try{
+    var fullPrompt=prompt+', '+currentStyle+', high quality, detailed, aspect ratio '+currentRatio;
+    var imageUrl=null;
+    // Nếu có ảnh mẫu thì upload lên Fal để AI vẽ theo ảnh đó (image-to-image), không có thì vẽ từ prompt thôi
+    var refFile=document.getElementById('refImg')?document.getElementById('refImg').files[0]:null;
+    var refUrl=null;
+    if(refFile){
+      load.textContent='⏳ Đang tải ảnh mẫu lên...';
+      var fd=new FormData(); fd.append('file',refFile);
+      var upRes=await fetch('https://api.fal.ai/storage/upload',{method:'POST',headers:{'Authorization':'Key '+key},body:fd});
+      var upJson=await upRes.json(); refUrl=upJson.url||upJson.file_url;
+      if(refUrl) fullPrompt=fullPrompt+', keep the same face and identity as the reference image';
+      load.textContent='⏳ Đang vẽ ảnh bằng '+currentImgAIName+' theo ảnh mẫu...';
+    }
+    // Fal: FLUX / Imagen / Recraft / Ideogram / SDXL đều có endpoint chung, dùng flux làm mặc định
+    var endpoint='fal-ai/flux-pro/v1.1-ultra';
+    if(currentImgAI==='imagen') endpoint='fal-ai/imagen4/preview';
+    if(currentImgAI==='recraft') endpoint='fal-ai/recraft/v3/text-to-image';
+    if(currentImgAI==='ideogram') endpoint='fal-ai/ideogram/v3';
+    if(currentImgAI==='sdxl') endpoint='fal-ai/fast-sdxl';
+    if(currentImgAI==='grok') endpoint='fal-ai/flux-pro/v1.1-ultra';
+    var res=await fetch('https://queue.fal.run/'+endpoint,{method:'POST',headers:{'Authorization':'Key '+key,'Content-Type':'application/json'},body:JSON.stringify(refUrl?{prompt:fullPrompt,image_url:refUrl,image_size:currentRatio==='9:16'?'portrait_9_16':currentRatio==='1:1'?'square':'landscape_16_9'}:{prompt:fullPrompt,image_size:currentRatio==='9:16'?'portrait_9_16':currentRatio==='1:1'?'square':'landscape_16_9'})});
+    var job=await res.json();
+    if(!job.request_id && job.detail) throw new Error('Fal báo lỗi - kiểm tra key');
+    var statusUrl=job.status_url||('https://queue.fal.run/fal-ai/requests/'+job.request_id+'/status');
+    for(var i=0;i<30;i++){ await new Promise(function(r){setTimeout(r,3000)}); var sres=await fetch(statusUrl,{headers:{'Authorization':'Key '+key}}); var sj=await sres.json(); if(sj.status==='COMPLETED'){ var ores=await fetch(sj.response_url,{headers:{'Authorization':'Key '+key}}); var oj=await ores.json(); var imgs=oj.images||oj.image; imageUrl=Array.isArray(imgs)?imgs[0].url:(imgs&&imgs.url)||oj.image_url; break; } if(sj.status==='FAILED') throw new Error('AI báo lỗi khi vẽ'); }
+    if(!imageUrl) throw new Error('AI không trả ảnh - có thể hết free credits, đổi Provider khác thử nhé!');
+    img.src=imageUrl; img.style.display='block'; img.dataset.url=imageUrl;
+    document.getElementById('imgActions').style.display='flex';
+    load.style.display='none'; st.textContent='✅ AI vẽ xong rồi! Bấm "Dùng ảnh này qua Mục 2" để làm video nhảy luôn.';
+    img.scrollIntoView({behavior:'smooth'});
+  }catch(e){ load.style.display='none'; st.textContent='❌ Lỗi: '+e.message+' — Bạn đổi Provider / kiểm tra key rồi thử lại nhé!'; }
+}
+function useImgForDance(){
+  var img=document.getElementById('imgResult');
+  if(!img||!img.src){alert('Bạn tạo ảnh AI trước đã nhé!'); return;}
+  var prev=document.getElementById('prev');
+  prev.src=img.src; prev.style.display='block';
+  document.getElementById('imgOk').style.display='block';
+  // Lưu URL để createRealAI dùng (khi ảnh từ AI, không cần file upload)
+  window.aiImageUrl=img.dataset.url||img.src;
+  switchStudio(2);
+  setTimeout(function(){document.getElementById('studio2').scrollIntoView({behavior:'smooth'});},100);
+  alert('Đã đưa ảnh AI qua Mục 2 rồi! Giờ bạn upload Video mẫu rồi bấm Tạo Video nhé!');
+}
+function downloadImgResult(){
+  var img=document.getElementById('imgResult');
+  if(img&&img.src){var a=document.createElement('a'); a.href=img.src; a.download='gum-ai-'+Date.now()+'.png'; a.target='_blank'; a.click();}
+}
+
+// ===== KHO API KEY 10 CON AI TOP =====
+var TOP_AIS=[
+{id:'google', name:'🔵 Google Flow (Veo + Imagen + Nano Banana)', desc:'Veo 3.1 + Imagen 4 + Nano Banana — Con ngon nhất, ảnh + video đều làm được', link:'https://flow.google.com', hint:'flow.google.com → Đăng nhập Gmail là có', type:'Ảnh + Video', free:'MỖI NGÀY', freeDetail:'50 credits / ngày, qua đêm tự hồi lại — Sáng dậy là có lại!'},
+{id:'kling', name:'🎬 Kling AI', desc:'Kling 2.1 làm video nhảy rất mượt, mặt đẹp', link:'https://klingai.com', hint:'klingai.com → Đăng nhập mỗi ngày', type:'Video', free:'MỖI NGÀY', freeDetail:'66 credits / ngày, tự hồi mỗi 24h — Làm được ~2 video nhảy / ngày'},
+{id:'pixverse', name:'⚡ PixVerse', desc:'PixVerse V6 — Làm video anime, stylized nhanh, có tiếng', link:'https://pixverse.ai', hint:'pixverse.ai → Đăng nhập', type:'Video', free:'MỖI NGÀY', freeDetail:'30 credits / ngày + 60 tặng khi đăng ký — Làm video ngắn, Reels'},
+{id:'dreamina', name:'🌙 Dreamina / Seedance (ByteDance)', desc:'Seedance 2.0 của TikTok — Làm video + ảnh, nhiều lượt nhất', link:'https://dreamina.capcut.com', hint:'dreamina.capcut.com → Đăng nhập TikTok / Gmail', type:'Ảnh + Video', free:'MỖI NGÀY', freeDetail:'~120 credits / ngày — Làm được ~10-20 clip ngắn / ngày'},
+{id:'leonardo', name:'🦁 Leonardo AI', desc:'Phoenix + Flux — Vẽ ảnh game, thời trang, ảnh thật', link:'https://leonardo.ai', hint:'leonardo.ai → Đăng nhập', type:'Ảnh + Video', free:'MỖI NGÀY', freeDetail:'150 tokens / ngày — Vẽ được 15-30 ảnh / ngày'},
+{id:'ideogram', name:'🔤 Ideogram', desc:'Mạnh nhất khi ảnh có chữ, logo, poster, áo thun', link:'https://ideogram.ai', hint:'ideogram.ai → Đăng nhập bằng Google', type:'Ảnh', free:'MỖI NGÀY', freeDetail:'~25-40 ảnh / ngày — Chữ trong ảnh không bị sai'},
+{id:'viggle', name:'💃 Viggle', desc:'Chuyên cho người trong ảnh nhảy, múa — Đúng món của web mình!', link:'https://viggle.ai', hint:'viggle.ai → Đăng nhập', type:'Video nhảy', free:'MỖI NGÀY', freeDetail:'5 video / ngày — Cho ảnh nhảy theo video mẫu'},
+{id:'vidnoz', name:'🗣️ Vidnoz', desc:'Làm video nói chuyện, avatar nói theo giọng', link:'https://vidnoz.com', hint:'vidnoz.com → Đăng nhập', type:'Video nói', free:'MỖI NGÀY', freeDetail:'30 credits / ngày — Làm video avatar nói ~60s'},
+{id:'firefly', name:'🎨 Adobe Firefly', desc:'Ảnh + Video của Adobe, xài thương mại được, không sợ bản quyền', link:'https://firefly.adobe.com', hint:'firefly.adobe.com → Đăng nhập Adobe', type:'Ảnh + Video', free:'MỖI NGÀY', freeDetail:'Cho lượt tạo free mỗi ngày, ảnh không watermark, xài bán hàng được'},
+{id:'bing', name:'🖼️ Bing Designer (DALL-E 3)', desc:'DALL-E 3 của Microsoft — Vẽ ảnh nhanh, không cần cài gì', link:'https://designer.microsoft.com', hint:'designer.microsoft.com → Đăng nhập Microsoft', type:'Ảnh', free:'MỖI NGÀY', freeDetail:'15 ảnh nhanh / ngày + tạo chậm không giới hạn — Vẽ ảnh mẫu cho Mục 1'},
+];
+function getSavedKeys(){ try{return JSON.parse(localStorage.getItem('gum_api_keys')||'{}');}catch(e){return{};} }
+function saveKey(id){
+  var inp=document.getElementById('key-'+id); if(!inp) return;
+  var v=inp.value.trim(); if(!v){alert('Bạn dán key vào ô trước đã nhé!'); return;}
+  var keys=getSavedKeys(); keys[id]=v; localStorage.setItem('gum_api_keys', JSON.stringify(keys));
+  renderApiList(); alert('✅ Đã lưu key '+id+' rồi! Giờ vào Studio chọn AI đó là tạo được.');
+}
+function clearKey(id){ var keys=getSavedKeys(); delete keys[id]; localStorage.setItem('gum_api_keys', JSON.stringify(keys)); renderApiList(); }
+function clearAllKeys(){ if(!confirm('Xóa hết API Key?')) return; localStorage.removeItem('gum_api_keys'); renderApiList(); }
+function getKey(id){ var keys=getSavedKeys(); return keys[id]||''; }
+function renderApiList(){
+  var keys=getSavedKeys(); var count=Object.keys(keys).filter(function(k){return keys[k];}).length;
+  var c=document.getElementById('apiCount'); if(c) c.textContent=count+'/10';
+  var list=document.getElementById('apiList'); if(!list) return;
+  var h='';
+  TOP_AIS.forEach(function(ai){
+    var has=!!keys[ai.id];
+    var freeColor=ai.free==='MỖI NGÀY'?'background:#064e3b;color:#6ee7b7':ai.free==='MỖI TUẦN'?'background:#422006;color:#fde68a':'background:#3f1d1d;color:#fca5a5';
+    h+='<div class="api-card '+(has?'has-key':'')+'"><div class="api-top"><div><div class="api-name">'+ai.name+' <span style="font-size:11px;background:#26264a;padding:3px 8px;border-radius:999px">'+ai.type+'</span> <span style="font-size:11px;padding:3px 8px;border-radius:999px;'+freeColor+'">'+(ai.free==='MỖI NGÀY'?'🔄 FREE MỖI NGÀY':ai.free==='MỖI TUẦN'?'📅 FREE MỖI TUẦN':'🎁 FREE 1 LẦN')+'</span></div><div class="api-desc">'+ai.desc+'</div><div style="font-size:12px;color:#fde68a">💰 '+ai.freeDetail+'</div><div style="font-size:12px">🔗 <a class="api-link" href="'+ai.link+'" target="_blank">Lấy FREE → '+ai.link.replace('https://','')+'</a> • '+ai.hint+'</div></div><span class="api-status '+(has?'yes':'no')+'">'+(has?'✅ Đã lưu':'⭕ Chưa có')+'</span></div>';
+    h+='<input class="api-input" id="key-'+ai.id+'" type="password" placeholder="Dán API Key của '+ai.name+' vào đây..." value="'+(has?keys[ai.id]:'')+'">';
+    h+='<div class="row"><button class="btn btn-pink" style="flex:1" onclick="saveKey(\''+ai.id+'\')">💾 Lưu key</button>'+(has?'<button class="btn btn-dark" onclick="clearKey(\''+ai.id+'\')">🗑️ Xóa</button>':'')+'<button class="btn btn-purple" onclick="showTab(\'studio\');switchStudio(1)">🎨 Dùng ngay</button></div></div>';
+  });
+  list.innerHTML=h;
+}
+document.addEventListener('DOMContentLoaded',function(){ renderApiList(); 
+  // Tự điền key cũ (falKey) vào kho nếu có
+  var old=document.getElementById('falKey'); if(old){ old.addEventListener('change',function(){ if(old.value.trim()){ var k=getSavedKeys(); if(!k.fal){k.fal=old.value.trim(); localStorage.setItem('gum_api_keys', JSON.stringify(k)); renderApiList();} } }); }
+});
+function getActiveKey(){
+  // Ưu tiên key theo provider đang chọn ở Mục 2, nếu không có thì lấy key Fal / Kie / WaveSpeed nào có sẵn
+  var prov=document.getElementById('provider')?document.getElementById('provider').value:'fal';
+  var map={fal:'fal', kie:'kie', wavespeed:'wavespeed'};
+  var k=getKey(map[prov]||'fal');
+  if(k) return k;
+  var all=getSavedKeys();
+  for(var i=0;i<TOP_AIS.length;i++){ if(all[TOP_AIS[i].id]) return all[TOP_AIS[i].id]; }
+  var f=document.getElementById('falKey'); if(f&&f.value.trim()) return f.value.trim();
+  return '';
+}
+function openAllFree(){
+  var urls=['https://flow.google.com','https://klingai.com','https://pixverse.ai','https://dreamina.capcut.com','https://leonardo.ai','https://ideogram.ai','https://viggle.ai','https://vidnoz.com','https://firefly.adobe.com','https://designer.microsoft.com'];
+  urls.forEach(function(u){ window.open(u,'_blank'); });
+  alert('Đã mở 10 tab lấy free rồi! Bạn qua từng tab bấm Đăng nhập bằng Google là free tự hồi lại nhé. Trên iPhone, Safari chỉ mở được 1 tab 1 lần, bạn bấm từng link trong Kho API Key cũng được.');
+}
+function openTodayChecklist(){
+  var box=document.getElementById('todayChecklist'); if(!box) return;
+  if(box.style.display==='block'){ box.style.display='none'; return; }
+  box.style.display='block';
+  var today=new Date().toDateString();
+  var saved=JSON.parse(localStorage.getItem('gum_daily_check')||'{}');
+  if(saved.date!==today){ saved={date:today, done:{}}; localStorage.setItem('gum_daily_check', JSON.stringify(saved)); }
+  var done=saved.done||{};
+  var names=[['google','🔵 Google Flow - 50 credits'],['kling','🎬 Kling - 66 credits'],['pixverse','⚡ PixVerse - 30 credits'],['dreamina','🌙 Dreamina - ~120 credits'],['leonardo','🦁 Leonardo - 150 tokens'],['ideogram','🔤 Ideogram - ~30 ảnh'],['viggle','💃 Viggle - 5 video'],['vidnoz','🗣️ Vidnoz - 30 credits'],['firefly','🎨 Firefly - Free mỗi ngày'],['bing','🖼️ Bing - 15 ảnh nhanh']];
+  var h='<div class="card"><h2>📋 CHECKLIST HÔM NAY — '+today+'</h2><p class="muted">Tick con nào bạn đã vào lấy free hôm nay. Qua ngày mới nó tự reset lại.</p>';
+  var c=0; names.forEach(function(n){ var isDone=!!done[n[0]]; if(isDone) c++; h+='<div class="check-item '+(isDone?'done':'')+'" onclick="toggleDaily(\''+n[0]+'\')"><span class="check-box">'+(isDone?'✅':'')+'</span><span style="flex:1;font-weight:700">'+n[1]+'</span><span style="font-size:12px">'+(isDone?'Đã lấy ✅':'Chưa lấy')+'</span></div>'; });
+  h+='<p style="font-weight:800">Đã lấy: '+c+'/10 con hôm nay</p><button class="btn btn-pink btn-big" onclick="openAllFree()">🚀 Mở hết 10 trang còn lại</button></div>';
+  box.innerHTML=h; box.scrollIntoView({behavior:'smooth'});
+}
+function toggleDaily(id){
+  var today=new Date().toDateString();
+  var saved=JSON.parse(localStorage.getItem('gum_daily_check')||'{}');
+  if(saved.date!==today) saved={date:today, done:{}};
+  saved.done[id]=!saved.done[id]; localStorage.setItem('gum_daily_check', JSON.stringify(saved)); openTodayChecklist();
+}
+function saveFalKey(){
+  var k=document.getElementById('falKey').value.trim();
+  if(!k){ alert('Bạn chưa dán key!'); return; }
+  localStorage.setItem('gum_fal_key', k);
+  var imgK=document.getElementById('imgKey'); if(imgK) imgK.value=k;
+  var st=document.getElementById('falKeyStatus'); if(st) st.innerHTML='✅ Đã lưu key rồi — Lưu 1 lần là xài mãi! Mỗi ngày chỉ cần bấm nút xanh <b>Mở hết 10 web nhận free</b> để nhận lượt, khỏi dán lại. Giờ bấm <b>Tạo Video</b> là web tự request AI chạy.';
+  alert('Đã lưu API Key! Giờ bấm Tạo Video là web tự request AI chạy trong web.');
+}
+function openProviderKeyPage(){
+  var p=document.getElementById('provider')?document.getElementById('provider').value:'google';
+  var links={google:'https://flow.google.com', kling:'https://klingai.com', viggle:'https://viggle.ai', pixverse:'https://pixverse.ai', dreamina:'https://dreamina.capcut.com', vidnoz:'https://vidnoz.com', wavespeed:'https://wavespeed.ai', kie:'https://kie.ai', fal:'https://fal.ai'};
+  window.open(links[p]||links.google,'_blank');
+}
+// Auto load saved key on start
+setTimeout(function(){
+  var saved=localStorage.getItem('gum_fal_key');
+  if(saved){
+    var f=document.getElementById('falKey'); if(f) f.value=saved;
+    var i=document.getElementById('imgKey'); if(i) i.value=saved;
+    var st=document.getElementById('falKeyStatus'); if(st) st.innerHTML='✅ Đã có key đã lưu từ trước — Không cần dán lại! Mỗi ngày chỉ cần bấm nút xanh Mở hết 10 web để nhận free rồi bấm Tạo là chạy.';
+  }
+  var imgK=document.getElementById('imgKey'); if(imgK) imgK.addEventListener('input', function(){ var fk=document.getElementById('falKey'); if(fk) fk.value=this.value; });
+},500);
+
+// ===== 6 CON AI CHINH ANH + 6 CON AI CHINH VIDEO =====
+var IMG_AIS=[
+ {id:'google', name:'🔵 Google Flow', free:'50 credits / ngày', desc:'Imagen + Nano Banana — Ảnh siêu thật', link:'https://flow.google.com', claim:'https://flow.google.com', keyUrl:'https://aistudio.google.com/apikey'},
+ {id:'leonardo', name:'🦁 Leonardo', free:'150 tokens / ngày', desc:'Vẽ ảnh đẹp, nhiều style', link:'https://leonardo.ai', claim:'https://app.leonardo.ai', keyUrl:'https://app.leonardo.ai'},
+ {id:'ideogram', name:'🔤 Ideogram', free:'~30 ảnh / ngày', desc:'Chữ trong ảnh đẹp nhất', link:'https://ideogram.ai', claim:'https://ideogram.ai/login', keyUrl:'https://ideogram.ai'},
+ {id:'firefly', name:'🎨 Adobe Firefly', free:'Free mỗi ngày', desc:'Không watermark, xài bán hàng được', link:'https://firefly.adobe.com', claim:'https://firefly.adobe.com', keyUrl:'https://firefly.adobe.com'},
+ {id:'bing', name:'🖼️ Bing Designer', free:'15 ảnh nhanh / ngày', desc:'DALL-E 3 — Tạo chậm không giới hạn', link:'https://designer.microsoft.com', claim:'https://designer.microsoft.com', keyUrl:'https://designer.microsoft.com'},
+ {id:'dreamina_img', name:'🌙 Dreamina', free:'~120 credits / ngày', desc:'Nhiều lượt nhất', link:'https://dreamina.capcut.com', claim:'https://dreamina.capcut.com', keyUrl:'https://dreamina.capcut.com'},
+];
+var VID_AIS=[
+ {id:'google_vid', name:'🔵 Google Flow - Veo 3.1', free:'50 credits / ngày', desc:'Ngon nhất, ưu tiên xài con này', link:'https://flow.google.com', claim:'https://flow.google.com', keyUrl:'https://aistudio.google.com/apikey'},
+ {id:'kling', name:'🎬 Kling 2.1', free:'66 credits / ngày', desc:'Video nhảy rất mượt', link:'https://klingai.com', claim:'https://klingai.com', keyUrl:'https://klingai.com'},
+ {id:'viggle', name:'💃 Viggle', free:'5 video / ngày', desc:'Chuyên ảnh nhảy theo video mẫu', link:'https://viggle.ai', claim:'https://viggle.ai', keyUrl:'https://viggle.ai'},
+ {id:'pixverse', name:'⚡ PixVerse V6', free:'30 credits / ngày', desc:'Video anime, Reels', link:'https://pixverse.ai', claim:'https://pixverse.ai', keyUrl:'https://pixverse.ai'},
+ {id:'dreamina_vid', name:'🌙 Dreamina - Seedance', free:'~120 credits / ngày', desc:'Nhiều lượt nhất', link:'https://dreamina.capcut.com', claim:'https://dreamina.capcut.com', keyUrl:'https://dreamina.capcut.com'},
+ {id:'vidnoz', name:'🗣️ Vidnoz', free:'30 credits / ngày', desc:'Video avatar nói chuyện', link:'https://vidnoz.com', claim:'https://vidnoz.com', keyUrl:'https://vidnoz.com'},
+];
+var currentImgAI='google', currentVidAI='google_vid';
+function getKeys(){ try{ return JSON.parse(localStorage.getItem('gum_ai_keys')||'{}'); }catch(e){ return {}; } }
+function saveKeys(k){ localStorage.setItem('gum_ai_keys', JSON.stringify(k)); }
+function hasKey(id){ var k=getKeys(); return !!(k[id] && k[id].length>4); }
+function renderAIGrids(){
+  var imgGrid=document.getElementById('imgAIGrid'); var vidGrid=document.getElementById('vidAIGrid');
+  if(imgGrid){
+    imgGrid.innerHTML='';
+    IMG_AIS.forEach(function(ai){
+      var active = currentImgAI===ai.id ? ' active' : '';
+      var badge = hasKey(ai.id) ? '<span class="ai-badge">✅ Đã lưu key</span>' : '<span class="ai-badge nokey">Chưa có key</span>';
+      var d=document.createElement('div'); d.className='ai-card'+active; d.onclick=function(){ selectNewImgAI(ai.id); };
+      d.innerHTML=badge+'<div class="ai-name">'+ai.name+'</div><div class="ai-free">🎁 '+ai.free+'</div><div class="ai-desc">'+ai.desc+'</div><button class="btn btn-pink" style="width:100%;margin-top:6px;padding:8px;font-size:12px" onclick="event.stopPropagation();window.open(\''+ai.claim+'\',\'_blank\')">🎁 Nhận free hôm nay — 1 click</button>';
+      imgGrid.appendChild(d);
+    });
+  }
+  if(vidGrid){
+    vidGrid.innerHTML='';
+    VID_AIS.forEach(function(ai){
+      var active = currentVidAI===ai.id ? ' active' : '';
+      var badge = hasKey(ai.id) ? '<span class="ai-badge">✅ Đã lưu key</span>' : '<span class="ai-badge nokey">Chưa có key</span>';
+      var d=document.createElement('div'); d.className='ai-card'+active; d.onclick=function(){ selectNewVidAI(ai.id); };
+      d.innerHTML=badge+'<div class="ai-name">'+ai.name+'</div><div class="ai-free">🎁 '+ai.free+'</div><div class="ai-desc">'+ai.desc+'</div><button class="btn btn-pink" style="width:100%;margin-top:6px;padding:8px;font-size:12px;background:#22c55e" onclick="event.stopPropagation();window.open(\''+ai.claim+'\',\'_blank\')">🎁 Nhận free hôm nay — 1 click</button>';
+      vidGrid.appendChild(d);
+    });
+  }
+  renderKeyAreas();
+}
+function renderKeyAreas(){
+  // IMG key area: if has key -> hide input, show status + change + claim
+  var imgArea=document.getElementById('imgKeyArea'); if(imgArea){
+    var ai=IMG_AIS.find(function(x){return x.id===currentImgAI});
+    if(hasKey(currentImgAI)){
+      imgArea.innerHTML='<div style="background:#0a2a1a;border:1px solid #22c55e;border-radius:12px;padding:12px;margin:10px 0">✅ <b>Đã lưu API Key cho '+ai.name+' rồi — Ô nhập đã ẩn.</b><br><span style="font-size:13px">Web sẽ dùng key này để request AI chạy. Mỗi ngày chỉ cần bấm <b>Nhận free hôm nay</b> ở trên để nhận lượt, khỏi dán key lại.</span><br><div class="row" style="margin-top:8px"><button class="btn btn-dark" onclick="showKeyInput(\'img\')">🔄 Đổi key khác</button><button class="btn btn-pink" onclick="window.open(\''+ai.claim+'\',\'_blank\')">🎁 Nhận free hôm nay</button></div><div id="imgKeyInputWrap" class="key-box-hidden" style="margin-top:8px"><input id="imgKeyInput" type="text" placeholder="Dán API Key mới..." style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff"><button class="btn btn-pink" style="margin-top:6px;width:100%" onclick="saveNewKey(\'img\')">💾 Lưu key mới</button></div></div>';
+    } else {
+      imgArea.innerHTML='<div style="background:#1e1b4b;border:1px solid #6366f1;border-radius:12px;padding:12px;margin:10px 0"><b>🔑 API Key cho '+ai.name+' — Lưu 1 lần, xài mãi:</b><br><span style="font-size:12px">Chưa có key. Bấm Nhận free để login → Copy key → Dán vào đây:</span><br><input id="imgKeyInput" type="text" placeholder="Dán API Key của '+ai.name+'..." style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-top:8px"><div class="row" style="margin-top:8px"><button class="btn btn-pink" style="flex:1" onclick="saveNewKey(\'img\')">💾 Lưu key</button><button class="btn btn-dark" style="flex:1" onclick="window.open(\''+ai.keyUrl+'\',\'_blank\')">🔑 Lấy key →</button></div></div>';
+    }
+  }
+  var vidArea=document.getElementById('vidKeyArea'); if(vidArea){
+    var vai=VID_AIS.find(function(x){return x.id===currentVidAI});
+    if(hasKey(currentVidAI)){
+      vidArea.innerHTML='<div style="background:#0a2a1a;border:1px solid #22c55e;border-radius:12px;padding:12px;margin:10px 0">✅ <b>Đã lưu API Key cho '+vai.name+' rồi — Ô nhập đã ẩn.</b><br><span style="font-size:13px">Web sẽ dùng key này để request AI chạy. Mỗi ngày chỉ cần bấm <b>Nhận free hôm nay</b> để nhận lượt, khỏi dán key lại.</span><br><div class="row" style="margin-top:8px"><button class="btn btn-dark" onclick="showKeyInput(\'vid\')">🔄 Đổi key khác</button><button class="btn btn-pink" onclick="window.open(\''+vai.claim+'\',\'_blank\')">🎁 Nhận free hôm nay</button></div><div id="vidKeyInputWrap" class="key-box-hidden" style="margin-top:8px"><input id="vidKeyInput" type="text" placeholder="Dán API Key mới..." style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff"><button class="btn btn-pink" style="margin-top:6px;width:100%" onclick="saveNewKey(\'vid\')">💾 Lưu key mới</button></div></div>';
+    } else {
+      vidArea.innerHTML='<div style="background:#1e1b4b;border:1px solid #6366f1;border-radius:12px;padding:12px;margin:10px 0"><b>🔑 API Key cho '+vai.name+' — Lưu 1 lần, xài mãi:</b><br><span style="font-size:12px">Chưa có key. Bấm Nhận free để login → Copy key → Dán vào đây:</span><br><input id="vidKeyInput" type="text" placeholder="Dán API Key của '+vai.name+'..." style="width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#0f0f1e;color:#fff;margin-top:8px"><div class="row" style="margin-top:8px"><button class="btn btn-pink" style="flex:1" onclick="saveNewKey(\'vid\')">💾 Lưu key</button><button class="btn btn-dark" style="flex:1" onclick="window.open(\''+vai.keyUrl+'\',\'_blank\')">🔑 Lấy key →</button></div></div>';
+    }
+    // sync old falKey for backward compat
+    var fk=document.getElementById('falKey'); if(fk && hasKey(currentVidAI)) fk.value=getKeys()[currentVidAI];
+  }
+}
+function selectNewImgAI(id){ currentImgAI=id; currentImgAIName=IMG_AIS.find(function(x){return x.id===id}).name; var h=document.getElementById('imgAIHint'); if(h) h.innerHTML='Đang chọn: <b>'+currentImgAIName+'</b> — '+(IMG_AIS.find(function(x){return x.id===id}).free); renderAIGrids(); }
+function selectNewVidAI(id){ currentVidAI=id; var p=document.getElementById('provider'); if(p) p.value=id; var h=document.getElementById('providerHint'); if(h) h.innerHTML='Đang chọn: <b>'+VID_AIS.find(function(x){return x.id===id}).name+'</b> — '+(VID_AIS.find(function(x){return x.id===id}).free); renderAIGrids(); updateProviderHint(); }
+function showKeyInput(type){ var w=document.getElementById(type==='img'?'imgKeyInputWrap':'vidKeyInputWrap'); if(w) w.classList.remove('key-box-hidden'); }
+function saveNewKey(type){
+  var input=document.getElementById(type==='img'?'imgKeyInput':'vidKeyInput'); if(!input) return;
+  var v=input.value.trim(); if(!v || v.length<4){ alert('Bạn chưa dán key!'); return; }
+  var keys=getKeys(); var id = type==='img'? currentImgAI : currentVidAI; keys[id]=v; saveKeys(keys);
+  // also sync legacy
+  if(type==='vid') localStorage.setItem('gum_fal_key', v);
+  alert('Đã lưu API Key cho '+(type==='img'? currentImgAIName : VID_AIS.find(function(x){return x.id===currentVidAI}).name)+'! Ô nhập sẽ ẩn đi. Mỗi ngày chỉ cần bấm Nhận free là chạy.');
+  renderAIGrids();
+}
+function showCreditsAlert(type){
+  var el=document.getElementById(type==='img'?'imgCreditsAlert':'vidCreditsAlert'); if(el){ el.style.display='block'; el.scrollIntoView({behavior:'smooth'}); }
+  alert('⚠️ Hết credits ở con AI này rồi! Hãy đổi sang con AI khác bên trên để xài tiếp free hôm nay.');
+}
+// Auto render on load
+setTimeout(renderAIGrids, 300);
+function getUsers(){ try{ return JSON.parse(localStorage.getItem('gum_users')||'{}'); }catch(e){ return {}; } }
+function getCurrentUser(){ return localStorage.getItem('gum_current_user')||''; }
+function updateAccountUI(){
+  var cur=getCurrentUser(); var users=getUsers();
+  var out=document.getElementById('accountLoggedOut'); var inn=document.getElementById('accountLoggedIn');
+  if(cur && users[cur]){
+    if(out) out.style.display='none'; if(inn) inn.style.display='block';
+    document.getElementById('accName').textContent=cur;
+    var credits=users[cur].credits!=null?users[cur].credits:2;
+    document.getElementById('accCredits').textContent=credits+'/2 (Free)';
+    document.getElementById('accNapName').textContent=cur;
+    document.getElementById('accNapExample').textContent='NAP '+cur+' 10000';
+    var pills=document.querySelectorAll('.pill'); if(pills[0]) pills[0].textContent='🪙 Credits: '+cur+' • còn '+credits+'/2';
+    var nap=document.getElementById('napUser'); if(nap && !nap.value) nap.value=cur;
+  } else {
+    if(out) out.style.display='block'; if(inn) inn.style.display='none';
+  }
+}
+function showRegisterForm(){ document.getElementById('registerForm').style.display='block'; document.getElementById('loginForm').style.display='none'; }
+function showLoginForm(){ document.getElementById('registerForm').style.display='none'; document.getElementById('loginForm').style.display='block'; }
+async function doRegister(){
+  var u=document.getElementById('regUser').value.trim().toUpperCase().replace(/\s+/g,'');
+  var p=document.getElementById('regPass').value; var p2=document.getElementById('regPass2').value;
+  var msg=document.getElementById('regMsg');
+  if(!u || u.length<3){ msg.textContent='⚠️ Tên đăng nhập phải từ 3 ký tự trở lên, viết liền không dấu. VD: THUAN'; return; }
+  if(!p || p.length<4){ msg.textContent='⚠️ Mật khẩu phải từ 4 ký tự trở lên.'; return; }
+  if(p!==p2){ msg.textContent='⚠️ 2 mật khẩu không khớp nhau.'; return; }
+  // Kiểm tra trên cloud trước - tránh tạo trùng tên ở máy khác
+  var cloudCheck = await cloudLogin(u, p);
+  if(cloudCheck){ msg.textContent='⚠️ Tên '+u+' đã có trên cloud rồi, chọn tên khác đi.'; return; }
+  var users=getUsers();
+  if(users[u]){ msg.textContent='⚠️ Tên '+u+' đã có người dùng rồi, chọn tên khác đi.'; return; }
+  users[u]={pass:p, credits:2, created:new Date().toISOString()};
+  localStorage.setItem('gum_users', JSON.stringify(users));
+  localStorage.setItem('gum_current_user', u);
+  cloudRegister(u, p).then(function(ok){ if(ok) console.log('saved to cloud', u); });
+  msg.textContent='✅ Tạo tài khoản '+u+' thành công!';
+  alert('✅ Tạo tài khoản '+u+' thành công! Bạn đã đăng nhập rồi, giờ vào Studio tạo video thôi.');
+  updateAccountUI(); showTab('studio');
+}
+async function doLogin(){
+  var u=document.getElementById('loginUser').value.trim().toUpperCase().replace(/\s+/g,'');
+  var p=document.getElementById('loginPass').value;
+  var msg=document.getElementById('loginMsg');
+  msg.textContent='⏳ Đang kiểm tra trên cloud...';
+  // 1. Kiểm tra trên CLOUD trước - để Chrome / máy khác đăng nhập được acc tạo ở Safari
+  var cloudUser = await cloudLogin(u, p);
+  if(cloudUser){
+    // Lưu lại vào máy này luôn để lần sau vào nhanh
+    var users=getUsers(); users[u]={pass:p, credits:cloudUser.credits||2, created:cloudUser.created||new Date().toISOString()}; localStorage.setItem('gum_users', JSON.stringify(users));
+    localStorage.setItem('gum_current_user', u);
+    msg.textContent='✅ Đăng nhập thành công từ cloud! Xin chào '+u;
+    alert('✅ Đăng nhập thành công từ cloud! Xin chào '+u);
+    updateAccountUI(); showTab('studio'); return;
+  }
+  // 2. Không thấy trên cloud -> kiểm tra trên máy này (acc cũ chưa đồng bộ)
+  var users2=getUsers();
+  if(!users2[u]){ msg.textContent='⚠️ Chưa có tài khoản '+u+' trên cloud và trên máy này. Bạn tạo acc ở Safari thì bấm Đồng bộ acc cũ lên cloud ở Admin trước đã nhé!'; return; }
+  if(users2[u].pass!==p){ msg.textContent='⚠️ Sai mật khẩu rồi.'; return; }
+  localStorage.setItem('gum_current_user', u);
+  alert('✅ Đăng nhập thành công! Xin chào '+u+' (acc trên máy này, chưa có trên cloud)');
+  updateAccountUI(); showTab('studio');
+}
+function doLogout(){ localStorage.removeItem('gum_current_user'); updateAccountUI(); alert('Đã đăng xuất.'); }
+function deleteAccount(){
+  var cur=getCurrentUser(); if(!cur) return;
+  if(!confirm('Xóa tài khoản '+cur+' luôn không?')) return;
+  var users=getUsers(); delete users[cur]; localStorage.setItem('gum_users', JSON.stringify(users)); localStorage.removeItem('gum_current_user'); updateAccountUI();
+}
+setTimeout(updateAccountUI, 400);
+function doAdminLogin(){
+  var p=document.getElementById('adminPass').value;
+  if(p==='Gumprovipno1'){ document.getElementById('adminLoginBox').style.display='none'; document.getElementById('adminPanel').style.display='block'; renderAdmin(); }
+  else alert('Sai mật khẩu Admin rồi!');
+}
+function doAdminLogout(){ document.getElementById('adminLoginBox').style.display='block'; document.getElementById('adminPanel').style.display='none'; }
+function renderAdmin(){
+  var users=getUsers(); var q=(document.getElementById('adminSearch').value||'').toUpperCase().trim();
+  var names=Object.keys(users).filter(function(n){ return !q || n.indexOf(q)!==-1; });
+  document.getElementById('statTotal').textContent=Object.keys(users).length;
+  var today=new Date().toISOString().slice(0,10);
+  var todayCount=Object.values(users).filter(function(u){ return (u.created||'').slice(0,10)===today; }).length;
+  document.getElementById('statToday').textContent=todayCount;
+  var totalCredits=Object.values(users).reduce(function(s,u){ return s+(u.credits||0); },0);
+  document.getElementById('statCredits').textContent=totalCredits;
+  var list=document.getElementById('adminUserList');
+  if(names.length===0) list.innerHTML='<p class="muted">Chưa có user nào. Hoặc chưa khớp tên tìm kiếm.</p>';
+  else {
+    var h='';
+    names.forEach(function(n){
+      var u=users[n];
+      h+='<div style="background:#151527;border-radius:12px;padding:12px;margin-bottom:8px"><b>'+n+'</b> — 🪙 '+(u.credits||0)+' credits — 📅 '+(u.created||'').slice(0,10)+'<br><div class="row" style="margin-top:8px"><button class="btn btn-dark" style="flex:1" onclick="adminQuickAdd(\''+n+'\',12)">+12 credits</button><button class="btn btn-dark" style="flex:1" onclick="adminResetPass(\''+n+'\')">🔑 Reset pass</button><button class="btn btn-dark" style="flex:1;color:#f87171" onclick="adminDeleteUser(\''+n+'\')">🗑️ Xóa</button></div></div>';
+    });
+    list.innerHTML=h;
+  }
+}
+function adminAddCredits(){
+  var u=(document.getElementById('adminAddUser').value||'').trim().toUpperCase(); var c=parseInt(document.getElementById('adminAddCredits').value||'0');
+  if(!u || !c){ alert('Nhập tên user + số credits đã!'); return; }
+  var users=getUsers(); if(!users[u]) users[u]={pass:'123456', credits:0, created:new Date().toISOString()};
+  users[u].credits=(users[u].credits||0)+c; localStorage.setItem('gum_users', JSON.stringify(users));
+  alert('Đã cộng '+c+' credits cho '+u+'!'); renderAdmin(); updateAccountUI();
+}
+function adminQuickAdd(n,c){ var users=getUsers(); users[n].credits=(users[n].credits||0)+c; localStorage.setItem('gum_users', JSON.stringify(users)); renderAdmin(); updateAccountUI(); }
+function adminResetPass(n){ var np=prompt('Mật khẩu mới cho '+n+':','123456'); if(!np) return; var users=getUsers(); users[n].pass=np; localStorage.setItem('gum_users', JSON.stringify(users)); alert('Đã reset pass cho '+n); }
+function adminDeleteUser(n){ if(!confirm('Xóa user '+n+' luôn không?')) return; var users=getUsers(); delete users[n]; localStorage.setItem('gum_users', JSON.stringify(users)); renderAdmin(); }
+function showWebhookCode(){ var el=document.getElementById('webhookCode'); el.style.display=(el.style.display==='block'?'none':'block'); }
+// ===== CLOUD SYNC - SUPABASE =====
+function getSupa(){
+  // CẤU HÌNH CLOUD CỐ ĐỊNH - Để mọi máy / mọi trình duyệt đều xài chung cloud, không cần nhập tay từng máy
+  var HARD_URL = 'https://jxqgixaymqzddcrmdmlk.supabase.co';
+  var HARD_KEY = 'PASTE_PUBLISHABLE_KEY_HERE'; // <-- Bạn dán Publishable key vào giữa 2 dấu ' này, thay cho chữ PASTE_PUBLISHABLE_KEY_HERE
+  try{
+    var saved = JSON.parse(localStorage.getItem('gum_supa')||'{}');
+    // Ưu tiên Key trong code (hardcode) nếu đã điền, nếu chưa thì lấy Key đã lưu trong Admin
+    if(HARD_KEY && HARD_KEY!=='PASTE_PUBLISHABLE_KEY_HERE') return {url:HARD_URL, key:HARD_KEY};
+    if(saved.url && saved.key) return saved;
+    if(HARD_URL) return {url:HARD_URL, key:saved.key||''};
+    return saved;
+  }catch(e){ return {url:HARD_URL, key:''}; }
+}
+function saveSupa(){
+  var u=document.getElementById('supaUrl').value.trim(); var k=document.getElementById('supaKey').value.trim();
+  if(!u || !k){ document.getElementById('supaMsg').textContent='⚠️ Nhập đủ URL + Key đã!'; return; }
+  localStorage.setItem('gum_supa', JSON.stringify({url:u, key:k}));
+  document.getElementById('supaMsg').textContent='✅ Đã lưu Cloud! Từ giờ acc lưu trên cloud, update file không mất nữa.';
+  updateCloudStatus(); alert('✅ Đã lưu Cloud! Từ giờ đăng ký acc mới sẽ lưu lên cloud, không phải đăng ký lại khi update file nữa.');
+}
+function updateCloudStatus(){
+  var s=getSupa(); var el=document.getElementById('cloudStatusText');
+  if(el){ if(s.url && s.key) el.innerHTML='<b style="color:#22c55e">✅ Đã bật Cloud — Acc lưu trên cloud, update file / đổi máy vẫn đăng nhập được.</b>'; else el.textContent='Đang xài lưu trên máy (chưa có cloud) — Update file / đổi máy sẽ phải đăng ký lại.'; }
+  var u=document.getElementById('supaUrl'); if(u && s.url) u.value=s.url;
+  var k=document.getElementById('supaKey'); if(k && s.key) k.value=s.key;
+}
+async function cloudRegister(username, pass){
+  var s=getSupa(); if(!s.url || !s.key) return false;
+  console.log('cloudRegister', username, 'url=', s.url, 'hasKey=', !!s.key);
+  if(!s.url || !s.key){ console.log('CHUA CO SUPABASE KEY - Dang ky chi luu tren may'); return false; }
+  try{
+    // Dùng bảng gum_users trên Supabase: bạn tạo bảng gum_users (username text, pass text, credits int, created text) trong Supabase → Table Editor
+    var r=await fetch(s.url+'/rest/v1/gum_users', {method:'POST', headers:{'apikey':s.key,'Authorization':'Bearer '+s.key,'Content-Type':'application/json','Prefer':'return=representation'}, body:JSON.stringify({username:username, pass:pass, credits:2, created:new Date().toISOString()})});
+    return r.ok;
+  }catch(e){ return false; }
+}
+async function cloudLogin(username, pass){
+  var s=getSupa(); if(!s.url || !s.key) return null;
+  try{
+    var r=await fetch(s.url+'/rest/v1/gum_users?username=eq.'+encodeURIComponent(username)+'&select=*', {headers:{'apikey':s.key,'Authorization':'Bearer '+s.key}});
+    var j=await r.json(); if(j && j[0] && j[0].pass===pass) return j[0];
+    return null;
+  }catch(e){ return null; }
+}
+async function syncOldToCloud(){
+  var s=getSupa(); if(!s.url || !s.key){ alert('Chưa nhập Supabase URL + Key ở trên đã!'); return; }
+  var users=getUsers(); var names=Object.keys(users);
+  if(names.length===0){ alert('Máy này chưa có acc nào để đồng bộ.'); return; }
+  var ok=0;
+  for(var i=0;i<names.length;i++){ var n=names[i]; var u=users[n]; var res=await cloudRegister(n, u.pass); if(res) ok++; }
+  alert('Đã đồng bộ '+ok+'/'+names.length+' acc cũ lên cloud! Từ giờ đăng nhập ở máy khác cũng được.');
+}
+setTimeout(updateCloudStatus, 500);
+// Ghi đè doRegister/doLogin để ưu tiên Cloud nếu đã cấu hình - giữ nguyên localStorage làm backup
+var _origRegister = null; var _origLogin = null;
+function goTest(){document.getElementById('menuSelect').value='studio';showTab('studio');switchStudio(2);setTimeout(function(){document.getElementById('studio2').scrollIntoView({behavior:'smooth',block:'start'});},100);}
+function showImg(i){if(i.files&&i.files[0]){var r=new FileReader();r.onload=function(e){var p=document.getElementById('prev');p.src=e.target.result;p.style.display='block';document.getElementById('imgOk').style.display='block';};r.readAsDataURL(i.files[0]);}}
+function showSampleVideo(inp){if(inp.files&&inp.files[0]){var f=inp.files[0];var v=document.getElementById('samplePrev');v.src=URL.createObjectURL(f);v.style.display='block';document.getElementById('sampleName').textContent='✅ Đã tải: '+f.name+' — '+(f.size/1024/1024).toFixed(1)+' MB';}}
+function useSample(){var v=document.getElementById('samplePrev');if(!v||v.style.display==='none'){alert('Bạn tải lên video mẫu trước đã nhé!');goTest();return;}document.getElementById('danceStatus').textContent='✅ Đã nhận video mẫu! AI sẽ đọc chuyển động từ video này.';}
+function clearSample(){var v=document.getElementById('samplePrev');v.src='';v.style.display='none';document.getElementById('sampleVideo').value='';document.getElementById('sampleName').textContent='';}
+// --- AI THẬT: Fal.ai Wan 2.2 Animate ---
+async function uploadToFal(file, key){
+  var fd=new FormData(); fd.append('file', file);
+  var r=await fetch('https://api.fal.ai/storage/upload', {method:'POST', headers:{'Authorization':'Key '+key}, body:fd});
+  if(!r.ok) throw new Error('Upload lỗi '+r.status);
+  var j=await r.json(); return j.url || j.file_url || j;
+}
+async function createRealAI(){
+  var imgFile=document.getElementById('file').files[0];
+  var vidFile=document.getElementById('sampleVideo').files[0];
+  if(!imgFile){alert('Bạn upload ẢNH MẪU trước đã nhé!');goTest();return;}
+  if(!vidFile){alert('Bạn upload VIDEO MẪU trước đã nhé!');goTest();return;}
+  var provider=document.getElementById('provider').value;
+  var key=getActiveKey();
+  var btn=document.getElementById('createBtn'), loadBox=document.getElementById('loadBox'), s=document.getElementById('danceStatus');
+  if(btn){btn.disabled=true; btn.textContent='⏳ ĐANG LOAD AI THẬT...';}
+  if(loadBox){loadBox.style.display='block'; loadBox.textContent='⏳ Đang load AI thật ('+provider+')... AI đang vẽ lại người trong ảnh nhảy theo video mẫu, đợi 1-3 phút, đừng rời trang...';}
+  s.textContent='⏳ Đang load AI thật ('+provider+')...';
+  if(!key){
+    setTimeout(function(){
+      if(loadBox) loadBox.textContent='⚠️ Chưa có API Key nên AI thật chưa chạy được. Bạn chọn Provider ở trên, đăng ký lấy free credits (WaveSpeed / Kie.ai đều tặng free khi đăng ký), dán key vào rồi bấm Tạo lại nhé. Web KHÔNG cắt hình, KHÔNG tự tạo video giả.';
+      s.textContent='⚠️ Cần API Key để AI thật chạy. Bạn dán key vào rồi bấm Tạo lại.';
+      if(btn){btn.disabled=false; btn.textContent='🤖 TẠO VIDEO BẰNG AI THẬT — Người trong ảnh nhảy theo video mẫu';}
+    },1200);
+    return;
+  }
+  try{
+    var videoUrl=null;
+    if(provider==='fal'){
+      // Fal.ai Wan Animate - upload rồi gọi queue
+      async function up(file){ var fd=new FormData(); fd.append('file',file); var r=await fetch('https://api.fal.ai/storage/upload',{method:'POST',headers:{'Authorization':'Key '+key},body:fd}); var j=await r.json(); return j.url||j.file_url; }
+      var imgUrl=await up(imgFile); var vidUrl=await up(vidFile);
+      var res=await fetch('https://queue.fal.run/fal-ai/wan/v2.2-14b/animate/move',{method:'POST',headers:{'Authorization':'Key '+key,'Content-Type':'application/json'},body:JSON.stringify({image_url:imgUrl,video_url:vidUrl,prompt:'Person in the image dances exactly like the person in the reference video'})});
+      var job=await res.json(); var statusUrl=job.status_url||('https://queue.fal.run/fal-ai/requests/'+job.request_id+'/status');
+      for(var i=0;i<60;i++){ await new Promise(function(r){setTimeout(r,5000)}); var st=await fetch(statusUrl,{headers:{'Authorization':'Key '+key}}); var sj=await st.json(); if(sj.status==='COMPLETED'){ var ores=await fetch(sj.response_url,{headers:{'Authorization':'Key '+key}}); var oj=await ores.json(); videoUrl=(oj.video&&oj.video.url)||oj.video_url; break; } if(sj.status==='FAILED') throw new Error('AI Fal báo lỗi'); }
+    } else if(provider==='wavespeed'){
+      // WaveSpeed Wan 2.2 Animate - free credits
+      var fd2=new FormData(); fd2.append('image',imgFile); fd2.append('video',vidFile);
+      // WaveSpeed nhận URL, nên upload tạm qua file.io / hoặc dùng base64 - ở đây dùng API tạo task với file upload của WaveSpeed
+      // Gọi trực tiếp endpoint animate: cần image_url + video_url, nên upload lên tmpfiles trước (miễn phí, không cần key)
+      async function upTmp(file){ var f=new FormData(); f.append('file',file); var r=await fetch('https://tmpfiles.org/api/v1/upload',{method:'POST',body:f}); var j=await r.json(); return j.url.replace('https://tmpfiles.org/','https://tmpfiles.org/dl/'); }
+      var wImg=await upTmp(imgFile); var wVid=await upTmp(vidFile);
+      var wres=await fetch('https://api.wavespeed.ai/api/v3/wavespeed-ai/wan-2.2/animate',{method:'POST',headers:{'Authorization':'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({image:wImg,video:wVid,prompt:'Person dances like reference video'})});
+      var wj=await wres.json(); var taskId=wj.data&&wj.data.id;
+      for(var k=0;k<60;k++){ await new Promise(function(r){setTimeout(r,5000)}); var ws=await fetch('https://api.wavespeed.ai/api/v3/predictions/'+taskId+'/result',{headers:{'Authorization':'Bearer '+key}}); var wsj=await ws.json(); if(wsj.data&&wsj.data.status==='completed'){ videoUrl=wsj.data.outputs&&wsj.data.outputs[0]; break; } if(wsj.data&&wsj.data.status==='failed') throw new Error('AI WaveSpeed báo lỗi'); }
+    } else if(provider==='kie'){
+      // Kie.ai Grok Imagine - free credits
+      async function upTmp2(file){ var f=new FormData(); f.append('file',file); var r=await fetch('https://tmpfiles.org/api/v1/upload',{method:'POST',body:f}); var j=await r.json(); return j.url.replace('https://tmpfiles.org/','https://tmpfiles.org/dl/'); }
+      var kImg=await upTmp2(imgFile); var kVid=await upTmp2(vidFile);
+      var kres=await fetch('https://kie.ai/api/v1/jobs/createTask',{method:'POST',headers:{'Authorization':'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({model:'grok-imagine-1.5',input:{image_url:kImg,video_url:kVid,prompt:'Person dances like reference video'}})});
+      var kj=await kres.json(); var kid=kj.data&&kj.data.taskId;
+      for(var m=0;m<60;m++){ await new Promise(function(r){setTimeout(r,5000)}); var ks=await fetch('https://kie.ai/api/v1/jobs/recordInfo?taskId='+kid,{headers:{'Authorization':'Bearer '+key}}); var ksj=await ks.json(); if(ksj.data&&ksj.data.state===1){ videoUrl=ksj.data.resultUrls&&ksj.data.resultUrls[0]; break; } }
+    }
+    if(!videoUrl) throw new Error('AI không trả video - có thể hết free credits, bạn đổi Provider khác thử nhé!');
+    var v=document.getElementById('outVideo'); v.src=videoUrl; v.style.display='block';
+    var a=document.getElementById('dlLink'); a.href=videoUrl; a.download='gum-ai-that-'+Date.now()+'.mp4'; a.style.display='block';
+    s.textContent='✅ AI thật tạo xong rồi! Người trong ảnh đã nhảy như video mẫu.';
+    if(loadBox) loadBox.style.display='none';
+    v.scrollIntoView({behavior:'smooth'});
+  }catch(e){
+    s.textContent='❌ Lỗi: '+e.message;
+    if(loadBox) loadBox.textContent='❌ Lỗi: '+e.message+' - Có thể hết free credits, bạn đổi Provider khác (WaveSpeed <-> Kie <-> Fal) để xài tiếp lượt free hằng ngày nhé!';
+  }finally{
+    if(btn){btn.disabled=false; btn.textContent='🤖 TẠO VIDEO BẰNG AI THẬT — Người trong ảnh nhảy theo video mẫu';}
+  }
+}</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body></html>
